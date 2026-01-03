@@ -56,7 +56,7 @@
                     class="bg-black/50 border border-white/20 rounded-full py-1.5 pl-10 pr-4 text-xs md:text-sm focus:outline-none focus:border-red-600 focus:bg-black/80 transition-all w-32 md:w-64">
             </div>
             <i class="fas fa-bell text-sm md:text-lg cursor-pointer hidden sm:block"></i>
-            <div onclick="showProfile()" class="w-7 h-7 md:w-8 md:h-8 bg-blue-500 rounded cursor-pointer flex items-center justify-center font-bold text-xs md:text-sm">U</div>
+            <div onclick="window.location.href='/profile.html'" class="w-7 h-7 md:w-8 md:h-8 bg-blue-500 rounded cursor-pointer flex items-center justify-center font-bold text-xs md:text-sm">U</div>
         </div>
     </nav>
 
@@ -78,10 +78,10 @@
             <i class="fas fa-language text-lg"></i>
             <span class="text-[9px] font-medium tracking-tight">Sulih</span>
         </a>
-        <button onclick="showProfile()" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+        <a href="/profile.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
             <i class="fas fa-user text-lg"></i>
             <span class="text-[9px] font-medium tracking-tight">Profil</span>
-        </button>
+        </a>
     </div>
 
     <!-- Hero Section -->

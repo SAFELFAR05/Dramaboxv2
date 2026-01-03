@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELFARBOX - Profil v2.1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #141414; color: white; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-black/90 p-4 flex justify-between items-center px-4 md:px-8">
+        <a href="/" class="flex items-center space-x-2 text-white hover:text-gray-300 transition">
+            <i class="fas fa-arrow-left text-2xl"></i>
+            <span class="text-xl font-bold">Kembali</span>
+        </a>
+        <h1 class="text-white text-xl md:text-2xl font-bold tracking-tighter uppercase cursor-pointer" onclick="window.location.href='/'">
+            <span class="text-red-600">ELFAR</span><span class="italic">BOX</span> <span class="text-[10px] lowercase font-light text-gray-400">v2.1</span>
+        </h1>
+    </nav>
+
+    <div class="pt-24 px-4 max-w-md mx-auto">
+        <div class="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl p-8">
+            <div class="flex flex-col items-center mb-10 text-center">
+                <div class="w-24 h-24 bg-gradient-to-br from-red-600 to-red-900 rounded-full flex items-center justify-center text-4xl font-bold shadow-lg border-4 border-white/10 mb-4">U</div>
+                <h2 class="text-2xl font-bold text-white tracking-tight">Pengguna Setia</h2>
+                <p class="text-white/40 text-sm">elfarbox@elfar.my.id</p>
+            </div>
+            
+            <div class="space-y-3">
+                <button class="w-full flex items-center justify-between p-4 hover:bg-white/10 rounded-xl transition-all text-white/90 group bg-white/5">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                            <i class="fas fa-user-circle text-lg text-white/60"></i>
+                        </div>
+                        <span class="font-medium">Edit Profil</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-xs text-white/30 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                
+                <button class="w-full flex items-center justify-between p-4 hover:bg-white/10 rounded-xl transition-all text-white/90 group bg-white/5">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                            <i class="fas fa-history text-lg text-white/60"></i>
+                        </div>
+                        <span class="font-medium">Riwayat Tonton</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-xs text-white/30 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+
+                <div class="h-[1px] bg-white/10 my-6"></div>
+
+                <button class="w-full flex items-center space-x-4 p-4 hover:bg-red-500/10 rounded-xl transition-all text-red-400 group bg-red-500/5">
+                    <div class="w-10 h-10 rounded-lg bg-red-500/5 flex items-center justify-center group-hover:bg-red-500/10 transition-colors">
+                        <i class="fas fa-sign-out-alt text-lg"></i>
+                    </div>
+                    <span class="font-medium">Keluar</span>
+                </button>
+            </div>
+            
+            <p class="text-[10px] text-white/20 mt-12 text-center uppercase tracking-[0.2em] font-bold">ELFARBOX v2.1</p>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Bar (Bottom) -->
+    <div class="md:hidden fixed bottom-0 w-full bg-black/20 backdrop-blur-xl border-t border-white/10 z-50 px-6 py-2 pb-4 flex justify-between items-center text-gray-400">
+        <a href="/" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-home text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Beranda</span>
+        </a>
+        <a href="/shorts.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-play-circle text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Shorts</span>
+        </a>
+        <a href="/vip.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-crown text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">VIP</span>
+        </a>
+        <a href="/dubbed.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-language text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Sulih</span>
+        </a>
+        <a href="/profile.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95 text-white">
+            <i class="fas fa-user text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Profil</span>
+        </a>
+    </div>
+</body>
+</html>
