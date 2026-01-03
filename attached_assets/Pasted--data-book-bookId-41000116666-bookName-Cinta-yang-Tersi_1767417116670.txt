@@ -1,0 +1,1468 @@
+{
+  "data": {
+    "book": {
+      "bookId": "41000116666",
+      "bookName": "Cinta yang Tersisa di Balik Luka",
+      "cover": "https://thwztchapter.dramaboxdb.com/data/cppartner/4x1/41x0/410x0/41000116666/41000116666.jpg@w=240&h=400",
+      "viewCount": 8222031,
+      "followCount": 96016,
+      "introduction": "Zevan luka parah. Untungnya, Liora menyelamatkannya dengan transfusi darah, bahkan memanggil Zevan ayah, yang memulai kisah Liora menyelamatkan ibunya, Salsa yang terperangkap di rumah sakit jiwa bersama Zevan. Tapi, setelah mengetahui identitas asli Zevan, Salsa menuduh Zevan menyembunyikan identitasnya dan menyebabkan delapan tahun hidupnya dan putrinya terbuang sia-sia. Zevan berulang kali berusaha memperbaiki keadaan, akhirnya berhasil mendapatkan pengampunan Salsa.",
+      "chapterCount": 88,
+      "labels": [
+        "Second Chance",
+        "Hidden Identity"
+      ],
+      "tags": [
+        "Second Chance",
+        "Hidden Identity"
+      ],
+      "typeTwoIds": [
+        447
+      ],
+      "typeTwoNames": [
+        "Romansa"
+      ],
+      "typeTwoList": [
+        {
+          "id": 447,
+          "name": "Romansa",
+          "replaceName": "romansa"
+        }
+      ],
+      "language": "BAHASA_INDONESIA",
+      "typeTwoName": "Romansa",
+      "simpleLanguage": "in",
+      "bookNameEn": "Cinta-yang-Tersisa-di-Balik-Luka",
+      "bookNameLower": "cinta-yang-tersisa-di-balik-luka",
+      "shelfTime": "2025-06-03 15:53:21",
+      "firstShelfTime": "2025-06-03 15:53:21",
+      "performerList": [
+        {
+          "performerId": "21643",
+          "performerName": "Hongchen Ai",
+          "performerFormatName": "Hongchen-Ai",
+          "performerAvatar": "https://hwztchapter.dramaboxdb.com/data/cppartner/3x4/21643/21643.jpg?time=1766117720229",
+          "videoCount": 4
+        },
+        {
+          "performerId": "19499",
+          "performerName": "Shengnan Li",
+          "performerFormatName": "Shengnan-Li",
+          "performerAvatar": "https://hwztchapter.dramaboxdb.com/data/cppartner/9x9/19499/19499.jpg?time=1767179211868",
+          "videoCount": 8
+        }
+      ],
+      "performerIdList": [
+        19499,
+        21643
+      ]
+    },
+    "recommends": [
+      {
+        "bookId": "41000101854",
+        "bookName": "Flash Marriage with My Werewolf Husband",
+        "cover": "https://thwztchapter.dramaboxdb.com/data/cppartner/4x1/41x0/410x0/41000101854/41000101854.jpg@w=240&h=400",
+        "followCount": 27596592,
+        "introduction": "To escape her abusive stepfather, Lisa takes the offer from a law firm in New York, where she unexpectedly flash-marries her boss. As she juggles work, she wants to bring the werewolf who once attacked her to justice, her boss becomes more and more suspicious… Caught between his mounting suspicion and her undeniable attraction to him, Lisa struggles with her next move.",
+        "chapterCount": 74,
+        "labels": [
+          "Love After Marriage",
+          "Forced Love"
+        ],
+        "tags": [
+          "Love After Marriage",
+          "Forced Love"
+        ],
+        "typeTwoIds": [
+          161,
+          274,
+          292,
+          248
+        ],
+        "typeTwoNames": [
+          "Romance",
+          "Werewolf",
+          "Wealthy",
+          "Sweet Love"
+        ],
+        "typeTwoList": [
+          {
+            "id": 161,
+            "name": "Romance",
+            "replaceName": "romance"
+          },
+          {
+            "id": 274,
+            "name": "Werewolf",
+            "replaceName": "werewolf"
+          },
+          {
+            "id": 292,
+            "name": "Wealthy",
+            "replaceName": "wealthy"
+          },
+          {
+            "id": 248,
+            "name": "Sweet Love",
+            "replaceName": "sweet-love"
+          }
+        ],
+        "language": "ENGLISH",
+        "typeTwoName": "Romance",
+        "simpleLanguage": "en",
+        "bookNameEn": "Flash-Marriage-with-My-Werewolf-Husband",
+        "bookNameLower": "flash-marriage-with-my-werewolf-husband",
+        "shelfTime": "2024-01-15 17:04:43",
+        "firstShelfTime": "2024-01-15 17:04:43",
+        "performerIdList": [
+          12262,
+          14327
+        ]
+      },
+      {
+        "bookId": "41000100424",
+        "bookName": "Jude's Sweet Pursuit",
+        "cover": "https://thwztchapter.dramaboxdb.com/data/cppartner/4x1/41x0/410x0/41000100424/41000100424.jpg@w=240&h=400",
+        "followCount": 71787,
+        "introduction": "Chelsea Swanson and Jude Lewis have been married for three years, but not many knew about it. \r\nDuring the day, she was his employee, satisfying his every whim. At night, she was the President's wife, lying in a custom-made sofa designed by Jude in his mansion, and playing with his dog.\r\nHowever, only he could lord her around. If anyone were to humiliate or bully her, he would stand up for her and crush them to pieces...",
+        "chapterCount": 88,
+        "labels": [
+          "Love After Marriage",
+          "Billionaire"
+        ],
+        "tags": [
+          "Love After Marriage",
+          "Billionaire"
+        ],
+        "typeTwoIds": [
+          161,
+          248
+        ],
+        "typeTwoNames": [
+          "Romance",
+          "Sweet Love"
+        ],
+        "typeTwoList": [
+          {
+            "id": 161,
+            "name": "Romance",
+            "replaceName": "romance"
+          },
+          {
+            "id": 248,
+            "name": "Sweet Love",
+            "replaceName": "sweet-love"
+          }
+        ],
+        "language": "ENGLISH",
+        "typeTwoName": "Romance",
+        "simpleLanguage": "en",
+        "bookNameEn": "Jude-s-Sweet-Pursuit",
+        "bookNameLower": "jude-s-sweet-pursuit",
+        "shelfTime": "2023-06-14 13:36:31",
+        "firstShelfTime": "2023-06-14 13:36:31",
+        "performerIdList": []
+      },
+      {
+        "bookId": "41000100423",
+        "bookName": "From Substitute Bride to Beloved Wife",
+        "cover": "https://thwztchapter.dramaboxdb.com/data/cppartner/4x1/41x0/410x0/41000100423/41000100423.jpg@w=240&h=400",
+        "followCount": 109734,
+        "introduction": "Mabel was originally the daughter of the wealthy Grant family. However, her happy family was torn apart when she was eight. Since then, her days were hard and challenging. ",
+        "chapterCount": 100,
+        "labels": [
+          "Family Bonds",
+          "Strong Female Lead"
+        ],
+        "tags": [
+          "Family Bonds",
+          "Strong Female Lead"
+        ],
+        "typeTwoIds": [
+          161,
+          248,
+          250,
+          251
+        ],
+        "typeTwoNames": [
+          "Romance",
+          "Sweet Love",
+          "Marriage",
+          "Contract Marriage"
+        ],
+        "typeTwoList": [
+          {
+            "id": 161,
+            "name": "Romance",
+            "replaceName": "romance"
+          },
+          {
+            "id": 248,
+            "name": "Sweet Love",
+            "replaceName": "sweet-love"
+          },
+          {
+            "id": 250,
+            "name": "Marriage",
+            "replaceName": "marriage"
+          },
+          {
+            "id": 251,
+            "name": "Contract Marriage",
+            "replaceName": "contract-marriage"
+          }
+        ],
+        "language": "ENGLISH",
+        "typeTwoName": "Romance",
+        "simpleLanguage": "en",
+        "bookNameEn": "From-Substitute-Bride-to-Beloved-Wife",
+        "bookNameLower": "from-substitute-bride-to-beloved-wife",
+        "shelfTime": "2023-06-14 11:30:59",
+        "firstShelfTime": "2023-06-14 11:30:59",
+        "performerIdList": []
+      },
+      {
+        "bookId": "41000100377",
+        "bookName": "Kim Is Mission Impossible",
+        "cover": "https://thwztchapter.dramaboxdb.com/data/cppartner/4x1/41x0/410x0/41000100377/41000100377.jpg@w=240&h=400",
+        "followCount": 45906,
+        "introduction": "Kimberly and Darren, never having met even once, had been married for three years. Few people knew of their marriage. One night, she accidentally entered the wrong room and had a wild night with a man she thought was a stranger. The next day, she left behind ten dollars for the man and ran away, not knowing that he was actually her husband. Upon returning to her work, Kimberly was surprised that the new CEO was the man from her wild night...",
+        "chapterCount": 100,
+        "labels": [
+          "Love After Marriage",
+          "Billionaire"
+        ],
+        "tags": [
+          "Love After Marriage",
+          "Billionaire"
+        ],
+        "typeTwoIds": [
+          161,
+          250
+        ],
+        "typeTwoNames": [
+          "Romance",
+          "Marriage"
+        ],
+        "typeTwoList": [
+          {
+            "id": 161,
+            "name": "Romance",
+            "replaceName": "romance"
+          },
+          {
+            "id": 250,
+            "name": "Marriage",
+            "replaceName": "marriage"
+          }
+        ],
+        "language": "ENGLISH",
+        "typeTwoName": "Romance",
+        "simpleLanguage": "en",
+        "bookNameEn": "Kim-Is-Mission-Impossible",
+        "bookNameLower": "kim-is-mission-impossible",
+        "shelfTime": "2023-05-18 11:38:28",
+        "firstShelfTime": "2023-05-18 11:38:28",
+        "performerIdList": []
+      },
+      {
+        "bookId": "41000100376",
+        "bookName": "Henry's Imprisoned Wife",
+        "cover": "https://thwztchapter.dramaboxdb.com/data/cppartner/4x1/41x0/410x0/41000100376/41000100376.jpg@w=240&h=400",
+        "followCount": 18396,
+        "introduction": "Henry Saber's wife finds herself imprisoned—literally—and tortured by his own hands, leading her to give up on their relationship and leave him. However, Henry refuses to let her go, declaring that if she chose to stay by his side, she will stay with him for the rest of her life...",
+        "chapterCount": 98,
+        "labels": [
+          "Billionaire",
+          "Forced Love"
+        ],
+        "tags": [
+          "Billionaire",
+          "Forced Love"
+        ],
+        "typeTwoIds": [
+          256,
+          161,
+          259,
+          250
+        ],
+        "typeTwoNames": [
+          "Destiny",
+          "Romance",
+          "Twisted",
+          "Marriage"
+        ],
+        "typeTwoList": [
+          {
+            "id": 256,
+            "name": "Destiny",
+            "replaceName": "destiny"
+          },
+          {
+            "id": 161,
+            "name": "Romance",
+            "replaceName": "romance"
+          },
+          {
+            "id": 259,
+            "name": "Twisted",
+            "replaceName": "twisted"
+          },
+          {
+            "id": 250,
+            "name": "Marriage",
+            "replaceName": "marriage"
+          }
+        ],
+        "language": "ENGLISH",
+        "typeTwoName": "Destiny",
+        "simpleLanguage": "en",
+        "bookNameEn": "Henry-s-Imprisoned-Wife",
+        "bookNameLower": "henry-s-imprisoned-wife",
+        "shelfTime": "2023-05-18 11:13:12",
+        "firstShelfTime": "2023-05-18 11:13:12",
+        "performerIdList": []
+      },
+      {
+        "bookId": "41000100403",
+        "bookName": "Hooked On You",
+        "cover": "https://thwztchapter.dramaboxdb.com/data/cppartner/4x1/41x0/410x0/41000100403/41000100403.jpg@w=240&h=400",
+        "followCount": 112388,
+        "introduction": "Nathan Young, the wealthiest man in Delphville, lost his fiancée in a car crash. The perpetrator, Emily Cohen, who was once a famous lawyer, was sentenced to three years in prison. When she got out, she became a street sweeper in destitution and got mixed up with Nathan by accident. She knelt on the floor begging him, \"Nathan, have mercy.\" Nathan merely snickered, \"Emily, I'm never going to let you go.\" They say that Nathan is cold-hearted, but he doted on Emily. By a twi",
+        "chapterCount": 55,
+        "labels": [
+          "Forced Love",
+          "Revenge"
+        ],
+        "tags": [
+          "Forced Love",
+          "Revenge"
+        ],
+        "typeTwoIds": [
+          256,
+          161,
+          250
+        ],
+        "typeTwoNames": [
+          "Destiny",
+          "Romance",
+          "Marriage"
+        ],
+        "typeTwoList": [
+          {
+            "id": 256,
+            "name": "Destiny",
+            "replaceName": "destiny"
+          },
+          {
+            "id": 161,
+            "name": "Romance",
+            "replaceName": "romance"
+          },
+          {
+            "id": 250,
+            "name": "Marriage",
+            "replaceName": "marriage"
+          }
+        ],
+        "language": "ENGLISH",
+        "typeTwoName": "Destiny",
+        "simpleLanguage": "en",
+        "bookNameEn": "Hooked-On-You",
+        "bookNameLower": "hooked-on-you",
+        "shelfTime": "2023-06-07 15:46:21",
+        "firstShelfTime": "2023-06-07 15:46:21",
+        "performerIdList": []
+      }
+    ],
+    "chapterList": [
+      {
+        "id": "594263299",
+        "name": "第一集",
+        "index": 0,
+        "indexStr": "001",
+        "unlock": true,
+        "mp4": "https://hwztvideo.dramaboxdb.com/99/6x6/66x6/666x6/66661100014/594263299_1/594263299.720p.narrowv3.mp4?Expires=1767502800&Signature=TPa6JaTn70MMWQWv-wZMBHGPbvHrDp-nRb21YTJYnmMNEC7rKRqL9hw~GWDN0OUFbOz~c~6k4W0YsQCgILOLwukb8FvHvLYiofZfH5w6lAo2qD8ez4d3JnVGe7FDrKVK9CeX~qxtst55qp~O-8RUpbKlrq1sEI4mMr6h8wNC1oEZOy18~UX6wcPfBxO6gXxTZHmyeJJLTHVy~9~d2RnpkCdHvcf0YQ9eyG2RyW0PHMjIoW3VL27BXoC-e9WyUjP542B7wFk-FQ5QW6xEXJBElR3yHDxujPLVxbtPTqk9jtGPGXWbxjN1QE4w1aNy5jyK4hD~Hju5hd8WJIUlJ3~3NQ__&Key-Pair-Id=K3HA2TLE2QH99V",
+        "m3u8Url": "https://hwzthls.dramaboxdb.com/99/6x6/66x6/666x6/66661100014/594263299_1/m3u8/594263299.720p.m3u8?Expires=1767502800&Signature=ImYuVsIi4WJX7ct-vzRvAv0T-jiy3x271N51K~YJHcNqX-USL8qkDn4V6H-eKfn5EqCzrfeOXPDez43fbL8plubSH8GsIikqyr4Egf9Aao~CRuyOHy3MIOup-hFwFoZLXJ0AVEdfqmk0b-J4MNX9LxmI9sSMbTr9S9YW3c3Do4E6QOd22KKiVwr7Kj2n6OXWfGn~1PFaEkIRkR9w1knL0U1nuKLmox5~6vcprmDSQ4QQS~cEX2VyQigM8SOneJ4KfnEV7v3Ks2JsyIAASPlgG1LRK4LgRu33OxXKR97nsjbWDKKB2f~DKf4OXzPRs7hBk~0TseeY4xu21Tus~vCmeQ__&Key-Pair-Id=K1C3ZON3Z3PP3P",
+        "m3u8Flag": true,
+        "cover": "https://thwztvideo.dramaboxdb.com/99/6x6/66x6/666x6/66661100014/594263299_1/594263299.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 64222,
+        "new": false
+      },
+      {
+        "id": "594263300",
+        "name": "第二集",
+        "index": 1,
+        "indexStr": "002",
+        "unlock": true,
+        "mp4": "https://hwztvideo.dramaboxdb.com/00/6x6/66x6/666x6/66661100014/594263300_1/594263300.720p.narrowv3.mp4?Expires=1767502800&Signature=Yzet77-GmYAjZ2MAJen-9BTKHDc9LW9p53aw8x~MdzFZB1g1~s1MP-~hxmcW10lomH9exN7ftcY6ls9Pubvo3dtTYUwxc6MqQAfiDuUX5QRl8XXJrCf-EvORqNrA4zu5QGW5zR8Yg1yZO~Ib1ihAD12mB115PKGuTTqCZxIwKwPVamdPypl2Mha9cQRiAcbM-1-EvWFITQt~mLO1aus3KT2Qg0i1EoVwgifPlPY6KcL0hPy77gZjnk7Ohhh~S8vqmYD522mcuM8xMMgrIAXs6kL0G7cFWMygPVp6MPejcu0iITg0Gr0Ug7U4ZC1qhHt4xQEHjnRoALMj61EBUl16pQ__&Key-Pair-Id=K3HA2TLE2QH99V",
+        "m3u8Url": "https://hwzthls.dramaboxdb.com/00/6x6/66x6/666x6/66661100014/594263300_1/m3u8/594263300.720p.m3u8?Expires=1767502800&Signature=wESPTFQoNqBr44MCOd60zAZadVNGdWAoVaar5nRJd-25iaWWlrvA0SllSSxOdR18iR-ocadiSaX7CIq48EAP3MBncuAWtsVMyQDKj2uBWiCIRaM0GraBegR3HMvS3c7xS-ZA0IXEtjcgd6RIyGsjo6~4yPvRarHuK3paNNnbABpC-0ektKN6IBiCpvnwn~3NBLEQLB7FRUVlWY5hj8V2jlfqLZ2eQQk0T26EHOdDH-~9rwFEhxv6lZ4VCd1SbOV66-H1lJvVPHesIt1u238nKQHboGrSym~7PwDJykkoVXYfjvcABsJ9fr8tB2d8B~VhMHKMHnpebWDkM5AwM9jLJQ__&Key-Pair-Id=K1C3ZON3Z3PP3P",
+        "m3u8Flag": true,
+        "cover": "https://thwztvideo.dramaboxdb.com/00/6x6/66x6/666x6/66661100014/594263300_1/594263300.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 112393,
+        "new": false
+      },
+      {
+        "id": "594263301",
+        "name": "第三集",
+        "index": 2,
+        "indexStr": "003",
+        "unlock": true,
+        "mp4": "https://hwztvideo.dramaboxdb.com/10/6x6/66x6/666x6/66661100014/594263301_1/594263301.720p.narrowv3.mp4?Expires=1767502800&Signature=WWmFUzxw8~OWeQqj~m4zN2OQTg9dTgEplaUM97CpZceAcXqS4~FPd-cFwv7dJsS3nnGR6yHgwam0sfk53Cm41k1-P2CWPvmoZ8XuEmnURIbVhEhxQRkeslUOQFx6dhZusf-Fjvr7~zF~lyTxIZYHt~e7g6hMPYH-JTwvqXjlWyOADubnFxzbz4qe2xKMwFwM-Yi1GbrvDreqq18mQTw-My0-4dcQQqGF1VU1HoL3~F~1OCJNIlT6pIHQMVmM4a4V6y4OSr-frAAxCSRElBOrrxFRLFZTzywTvLNOPfOj-asq3YSU4bk1BnTbUmcgtTYEeAzpOAeTeiMFhtKe39CQ5g__&Key-Pair-Id=K3HA2TLE2QH99V",
+        "m3u8Url": "https://hwzthls.dramaboxdb.com/10/6x6/66x6/666x6/66661100014/594263301_1/m3u8/594263301.720p.m3u8?Expires=1767502800&Signature=w3A1zNixiaH-9OrftqE88DI~BUlJZPIFQaDihySmV-NTyndhASzSuCamlet-cinF0vop6x1Pg4LV3S7SoTZRugRGywRnJepAQU5TzfrVDpH3qI9W3EqEK-LPqxfcm-uoEt05dxqEGZJaKleoutr6OpQet5PiA8jC0TageC2yQHmjfc7qehHxdulsTZiWoTdixW2o2a-s9CqwzJ36SnhTW6wTIpQCFP-kl26scjqd7gmJmklKvcgTfVaL6xFqVqdfrafY3iOPlERM42rrpw3HALLKtfE2F7iJ4Oqik2xhwzcczdygi-iPRKUg88Xnqgdnj7wEi88F9WblNo04BqkpsQ__&Key-Pair-Id=K1C3ZON3Z3PP3P",
+        "m3u8Flag": true,
+        "cover": "https://thwztvideo.dramaboxdb.com/10/6x6/66x6/666x6/66661100014/594263301_1/594263301.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 161950,
+        "new": false
+      },
+      {
+        "id": "594263302",
+        "name": "第四集",
+        "index": 3,
+        "indexStr": "004",
+        "unlock": true,
+        "mp4": "https://hwztvideo.dramaboxdb.com/20/6x6/66x6/666x6/66661100014/594263302_1/594263302.720p.narrowv3.mp4?Expires=1767502800&Signature=l4ShfA4xXNS6tf5mmtzG8C3RxOIM9-vlMzx9~wWsK3rGNseMooRFTIoF37RbSzZUMdGL6SH-CDN7at3ojz3jXNBD8FI~RSJe6fQwV9GITecpHDCgG25-hB0YsOgX7M9S3QwZkt1Mr6MX~VUPfNtchXoDTsszYZ7awUln2DUdQZBEgZDBdw6wDNIey6moREYKBrdPQ~nnMkocb6l-lCujOgCdoY4zjZBHducPAjb-ymPYyFGSTDsGwYu~-C2we9mpm-SzkiefrMEIE8pRLbsRSD3JOXHaufPLx7lC-ivmHfhBG3hMY93KlaXFp77jqBhXc6eMz3B4GUk3kmWF6e9nXw__&Key-Pair-Id=K3HA2TLE2QH99V",
+        "m3u8Url": "https://hwzthls.dramaboxdb.com/20/6x6/66x6/666x6/66661100014/594263302_1/m3u8/594263302.720p.m3u8?Expires=1767502800&Signature=HgaLndTqIfBWO-4jpgDccghkFyjukwbAIu-c06koem4vfyhkLnNrFKvU14-Zu1jKVVJXFtTm-FXWYXweXHjWDDo51eVp7~il7PcfSwBpXARBxqsPBeGS~dHZrY~dkkCnM-ddto-iO~X2cQjhHtr-CaNHxjP67LwkZ3oN7dy138ZalLnb6Ex0Q6Px5-jFwEDgcZwnIGNEnyIaew-9PNPcao1z1T5dI5BJLyttEbsOaFIaT61u4NOIRMUjzMVovLA3KKXvG63F4fFPgtYhGi7JDNYV9sJqdUZnf0eIDS1l~kRXCL9Q09635VzkMKWHa-qUc09bNBgaiQiv1~sA-Ee8iA__&Key-Pair-Id=K1C3ZON3Z3PP3P",
+        "m3u8Flag": true,
+        "cover": "https://thwztvideo.dramaboxdb.com/20/6x6/66x6/666x6/66661100014/594263302_1/594263302.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 133171,
+        "new": false
+      },
+      {
+        "id": "594263303",
+        "name": "第五集",
+        "index": 4,
+        "indexStr": "005",
+        "unlock": true,
+        "mp4": "https://hwztvideo.dramaboxdb.com/30/6x6/66x6/666x6/66661100014/594263303_1/594263303.720p.narrowv3.mp4?Expires=1767502800&Signature=PVAX9Aar68c-rLQp4lTtxaAEVlNXxxZomq9pJ-8Ca8KiRl7rS-c9YP4lcL-ukIF7aFDBmtXfKteCjxfO00s8td3~oIadqxv5cqE1CmEZqG3Nehvr47Y5RpLI00X5MnIKsQ4OAtGd8~8PRSMzuxIs18xU~3LTsGKkLqXQYImF2wb95mm~f2V-ICnMmm9RT2Hr1oZ5fLcE9W0Ku~RVFUc-Wco-icebzSW2b-V28wrW-ghIQZ-TDVrdTLMgEa4OkAvcL~xHx~5vKAYDnsvS-lV7rRNQsBtY3l3cvaiH1u3mj~l~KTQHH9zFtJY3Nj4mH2sj42CdT4r7jD5zGFYskAJ~~g__&Key-Pair-Id=K3HA2TLE2QH99V",
+        "m3u8Url": "https://hwzthls.dramaboxdb.com/30/6x6/66x6/666x6/66661100014/594263303_1/m3u8/594263303.720p.m3u8?Expires=1767502800&Signature=n5GD3Qqv1884BFQQvhxtginN4iXr7fJuo9pMZoeeMiP6tRwjsX3cqHrB72w3u9~iRDmwOcwkFDtuHRrqUpB35ZhU4lkcZXSbiR4T5BktnggQotZbjVCUseDnWEw4JFi3EHwgYWU7r7DiRvItOvJIy3rV948289GI62OExzz7MA5C~FWSNlSWcVQMuxcXv-L2IrXUBZbH2rTqovewUc-Cxs1Hi-IBSHotBYn~BTuv4kM2fUgWw7e4CcchhVMWBkOJjO62~ByLdOUFnTIbWH2ZmO3RpST8sxxVMJU355m4NKUM2Mdp6pY~MDOSLi0t4J28k454ltpP1o2Eop6bdb7uEg__&Key-Pair-Id=K1C3ZON3Z3PP3P",
+        "m3u8Flag": true,
+        "cover": "https://thwztvideo.dramaboxdb.com/30/6x6/66x6/666x6/66661100014/594263303_1/594263303.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 176179,
+        "new": false
+      },
+      {
+        "id": "594263304",
+        "name": "第六集",
+        "index": 5,
+        "indexStr": "006",
+        "unlock": true,
+        "mp4": "https://hwztvideo.dramaboxdb.com/40/6x6/66x6/666x6/66661100014/594263304_1/594263304.720p.narrowv3.mp4?Expires=1767502800&Signature=C-Jqtz1v5RURdIsPgqAUZ3VoQPl-psUwrAnU7faF3WvXFbI8EaOKz3ivFKkzAr~keHNjQ-t2uaLbaerEw0npYcbQhR78ySFLu8K~rNy7Rjak7-DghAsKhe~0Cs1Z0tvnWRz6-Ld~aM3jsoZj0R0n66H722ePH1RUDuXbWrRqUQfYeRKNxTnDuHF9HYKp~gm77Lf2XBF8X16YxinGq917JNTrn5KIgxkgC6sOV2GgHOePy1rm9FMtkP5MndYmdjMh0TjN3i0GOU6jSXkMY8evCqsVXg10EFZY22aOjyaZhWIQO39yVtHgQnNMQDJ8LUZxwIBEaWAXTPiv97YgqwFP6w__&Key-Pair-Id=K3HA2TLE2QH99V",
+        "m3u8Url": "https://hwzthls.dramaboxdb.com/40/6x6/66x6/666x6/66661100014/594263304_1/m3u8/594263304.720p.m3u8?Expires=1767502800&Signature=FwCn8VHd63YQfY~v9BpZGYaOCT1UvXg2uswEQZjPqu8flV~yF0ky-C-Bdvapvo9-QD8XLyGDkykryhHF~hJ30kZeYCgGtULcGXT-cbzC4WXuuTvrPOM~Qzie2GrWHXI0lxS2cG6qnVW5xRi-Q0XRvDao8vQnB2cv8BIdNf1at8D40DM4YTlBvNITGkwCO9Ehak8e2RZ94yRWbvEBTte-IRLUUftqEPH1BpPFfOUritPL1Kz2Dy8xtGFCkXcFcCn8HZO7MaRI2-C2Tcc~neOHTx2t3husWNictBCejnuA8YxHhkWNKwIAziM4xW3QIZDsGAduNyPCeai5UAJdVV~nXA__&Key-Pair-Id=K1C3ZON3Z3PP3P",
+        "m3u8Flag": true,
+        "cover": "https://thwztvideo.dramaboxdb.com/40/6x6/66x6/666x6/66661100014/594263304_1/594263304.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 177950,
+        "new": false
+      },
+      {
+        "id": "594263305",
+        "name": "第七集",
+        "index": 6,
+        "indexStr": "007",
+        "unlock": true,
+        "mp4": "https://hwztvideo.dramaboxdb.com/50/6x6/66x6/666x6/66661100014/594263305_1/594263305.720p.narrowv3.mp4?Expires=1767502800&Signature=XSy3YTzmX2A0dbTyfDE7vWcHdp469q25KK6kmiYMYnyH3FCs5R87xJXDY1Z-T0nFENbcJ6~9V2iX78Hcju2DYPFb5ZWanFxUZQ3zeWn-imuYp3KKdjgBae8WMt4Qa40W5pVHP7-qo1A8ixyi-S3lFShSd94QVodfFtS48m1hFZVZR84TRmytp7CwI7u7u9QfuG9SQp7eSpsjB1r1VS-5qIM8zJYBtCszypt~12tNbcvJivCOcJ3lmPRO~BUmqmIePpS1i9R-XpO8YZGN-hw9y~VlY7Fv-7t8mi7EFzO7ZXvRvXT5qoA60OUtn~Nj8X7oAwl6ec~5KILbE4cViZChug__&Key-Pair-Id=K3HA2TLE2QH99V",
+        "m3u8Url": "https://hwzthls.dramaboxdb.com/50/6x6/66x6/666x6/66661100014/594263305_1/m3u8/594263305.720p.m3u8?Expires=1767502800&Signature=YXr4G8IcYhOwsFazs~SAx2nlMkOFaFHDMWXBnaANTl9v~anTi5iZQum3Pa1qXB1445AlAIFs0Wzg2l4JY1BodbOJTktOA5FUDZ-2O7q-35gM50WFmamXFD6h3UcbKO7eCB~c8KM0i4wxjlDVQ4XdNIvRaDKKDsNKoCkezCOFLxf6AswrDbCAqnQxcjE0gFSIgXYaz566bZQXPV4HN22fGinw7YZEYdIJ1-vK4jAVW7dYxKhZiJGKeh3v0QphIQDZibhsQF3gQ0Q-wGSoQ03GDPEdu~Db~MD8dpzBw9Wxi6a6XcDJAW82PkzexLV9hXpn4TNNIlsoTKBpF~hc1yhsdQ__&Key-Pair-Id=K1C3ZON3Z3PP3P",
+        "m3u8Flag": true,
+        "cover": "https://thwztvideo.dramaboxdb.com/50/6x6/66x6/666x6/66661100014/594263305_1/594263305.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 140979,
+        "new": false
+      },
+      {
+        "id": "594263306",
+        "name": "第八集",
+        "index": 7,
+        "indexStr": "008",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/60/6x6/66x6/666x6/66661100014/594263306_1/594263306.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 159902,
+        "new": false
+      },
+      {
+        "id": "594263307",
+        "name": "第九集",
+        "index": 8,
+        "indexStr": "009",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/70/6x6/66x6/666x6/66661100014/594263307_1/594263307.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 108531,
+        "new": false
+      },
+      {
+        "id": "594263308",
+        "name": "第十集",
+        "index": 9,
+        "indexStr": "010",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/80/6x6/66x6/666x6/66661100014/594263308_1/594263308.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 86771,
+        "new": false
+      },
+      {
+        "id": "594263309",
+        "name": "第十一集",
+        "index": 10,
+        "indexStr": "011",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/90/6x6/66x6/666x6/66661100014/594263309_1/594263309.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 145950,
+        "new": false
+      },
+      {
+        "id": "594263310",
+        "name": "第十二集",
+        "index": 11,
+        "indexStr": "012",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/01/6x6/66x6/666x6/66661100014/594263310_1/594263310.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 135497,
+        "new": false
+      },
+      {
+        "id": "594263311",
+        "name": "第十三集",
+        "index": 12,
+        "indexStr": "013",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/11/6x6/66x6/666x6/66661100014/594263311_1/594263311.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 61897,
+        "new": false
+      },
+      {
+        "id": "594263312",
+        "name": "第十四集",
+        "index": 13,
+        "indexStr": "014",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/21/6x6/66x6/666x6/66661100014/594263312_1/594263312.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 93150,
+        "new": false
+      },
+      {
+        "id": "594263313",
+        "name": "第十五集",
+        "index": 14,
+        "indexStr": "015",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/31/6x6/66x6/666x6/66661100014/594263313_1/594263313.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 86025,
+        "new": false
+      },
+      {
+        "id": "594263314",
+        "name": "第十六集",
+        "index": 15,
+        "indexStr": "016",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/41/6x6/66x6/666x6/66661100014/594263314_1/594263314.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 102302,
+        "new": false
+      },
+      {
+        "id": "594263315",
+        "name": "第十七集",
+        "index": 16,
+        "indexStr": "017",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/51/6x6/66x6/666x6/66661100014/594263315_1/594263315.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 112094,
+        "new": false
+      },
+      {
+        "id": "594263316",
+        "name": "第十八集",
+        "index": 17,
+        "indexStr": "018",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/61/6x6/66x6/666x6/66661100014/594263316_1/594263316.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 139529,
+        "new": false
+      },
+      {
+        "id": "594263317",
+        "name": "第十九集",
+        "index": 18,
+        "indexStr": "019",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/71/6x6/66x6/666x6/66661100014/594263317_1/594263317.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 115827,
+        "new": false
+      },
+      {
+        "id": "594263318",
+        "name": "第二十集",
+        "index": 19,
+        "indexStr": "020",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/81/6x6/66x6/666x6/66661100014/594263318_1/594263318.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 104819,
+        "new": false
+      },
+      {
+        "id": "594263319",
+        "name": "第二十一集",
+        "index": 20,
+        "indexStr": "021",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/91/6x6/66x6/666x6/66661100014/594263319_1/594263319.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 165193,
+        "new": false
+      },
+      {
+        "id": "594263320",
+        "name": "第二十二集",
+        "index": 21,
+        "indexStr": "022",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/02/6x6/66x6/666x6/66661100014/594263320_1/594263320.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 108681,
+        "new": false
+      },
+      {
+        "id": "594263321",
+        "name": "第二十三集",
+        "index": 22,
+        "indexStr": "023",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/12/6x6/66x6/666x6/66661100014/594263321_1/594263321.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 123315,
+        "new": false
+      },
+      {
+        "id": "594263322",
+        "name": "第二十四集",
+        "index": 23,
+        "indexStr": "024",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/22/6x6/66x6/666x6/66661100014/594263322_1/594263322.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 64329,
+        "new": false
+      },
+      {
+        "id": "594263323",
+        "name": "第二十五集",
+        "index": 24,
+        "indexStr": "025",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/32/6x6/66x6/666x6/66661100014/594263323_1/594263323.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 82995,
+        "new": false
+      },
+      {
+        "id": "594263324",
+        "name": "第二十六集",
+        "index": 25,
+        "indexStr": "026",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/42/6x6/66x6/666x6/66661100014/594263324_1/594263324.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 115699,
+        "new": false
+      },
+      {
+        "id": "594263325",
+        "name": "第二十七集",
+        "index": 26,
+        "indexStr": "027",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/52/6x6/66x6/666x6/66661100014/594263325_1/594263325.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 114291,
+        "new": false
+      },
+      {
+        "id": "594263326",
+        "name": "第二十八集",
+        "index": 27,
+        "indexStr": "028",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/62/6x6/66x6/666x6/66661100014/594263326_1/594263326.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 87475,
+        "new": false
+      },
+      {
+        "id": "594263327",
+        "name": "第二十九集",
+        "index": 28,
+        "indexStr": "029",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/72/6x6/66x6/666x6/66661100014/594263327_1/594263327.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 112393,
+        "new": false
+      },
+      {
+        "id": "594263328",
+        "name": "第三十集",
+        "index": 29,
+        "indexStr": "030",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/82/6x6/66x6/666x6/66661100014/594263328_1/594263328.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 112926,
+        "new": false
+      },
+      {
+        "id": "594263329",
+        "name": "第三十一集",
+        "index": 30,
+        "indexStr": "031",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/92/6x6/66x6/666x6/66661100014/594263329_1/594263329.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 79049,
+        "new": false
+      },
+      {
+        "id": "594263330",
+        "name": "第三十二集",
+        "index": 31,
+        "indexStr": "032",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/03/6x6/66x6/666x6/66661100014/594263330_1/594263330.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 118131,
+        "new": false
+      },
+      {
+        "id": "594263331",
+        "name": "第三十三集",
+        "index": 32,
+        "indexStr": "033",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/13/6x6/66x6/666x6/66661100014/594263331_1/594263331.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 99273,
+        "new": false
+      },
+      {
+        "id": "594263332",
+        "name": "第三十四集",
+        "index": 33,
+        "indexStr": "034",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/23/6x6/66x6/666x6/66661100014/594263332_1/594263332.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 86473,
+        "new": false
+      },
+      {
+        "id": "594263333",
+        "name": "第三十五集",
+        "index": 34,
+        "indexStr": "035",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/33/6x6/66x6/666x6/66661100014/594263333_1/594263333.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 62089,
+        "new": false
+      },
+      {
+        "id": "594263334",
+        "name": "第三十六集",
+        "index": 35,
+        "indexStr": "036",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/43/6x6/66x6/666x6/66661100014/594263334_1/594263334.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 85427,
+        "new": false
+      },
+      {
+        "id": "594263335",
+        "name": "第三十七集",
+        "index": 36,
+        "indexStr": "037",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/53/6x6/66x6/666x6/66661100014/594263335_1/594263335.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 106505,
+        "new": false
+      },
+      {
+        "id": "594263336",
+        "name": "第三十八集",
+        "index": 37,
+        "indexStr": "038",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/63/6x6/66x6/666x6/66661100014/594263336_1/594263336.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 152819,
+        "new": false
+      },
+      {
+        "id": "594263337",
+        "name": "第三十九集",
+        "index": 38,
+        "indexStr": "039",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/73/6x6/66x6/666x6/66661100014/594263337_1/594263337.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 102835,
+        "new": false
+      },
+      {
+        "id": "594263338",
+        "name": "第四十集",
+        "index": 39,
+        "indexStr": "040",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/83/6x6/66x6/666x6/66661100014/594263338_1/594263338.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 70131,
+        "new": false
+      },
+      {
+        "id": "594263339",
+        "name": "第四十一集",
+        "index": 40,
+        "indexStr": "041",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/93/6x6/66x6/666x6/66661100014/594263339_1/594263339.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 46451,
+        "new": false
+      },
+      {
+        "id": "594263340",
+        "name": "第四十二集",
+        "index": 41,
+        "indexStr": "042",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/04/6x6/66x6/666x6/66661100014/594263340_1/594263340.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 84851,
+        "new": false
+      },
+      {
+        "id": "594263341",
+        "name": "第四十三集",
+        "index": 42,
+        "indexStr": "043",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/14/6x6/66x6/666x6/66661100014/594263341_1/594263341.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 71646,
+        "new": false
+      },
+      {
+        "id": "594263342",
+        "name": "第四十四集",
+        "index": 43,
+        "indexStr": "044",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/24/6x6/66x6/666x6/66661100014/594263342_1/594263342.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 133769,
+        "new": false
+      },
+      {
+        "id": "594263343",
+        "name": "第四十五集",
+        "index": 44,
+        "indexStr": "045",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/34/6x6/66x6/666x6/66661100014/594263343_1/594263343.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 76659,
+        "new": false
+      },
+      {
+        "id": "594263344",
+        "name": "第四十六集",
+        "index": 45,
+        "indexStr": "046",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/44/6x6/66x6/666x6/66661100014/594263344_1/594263344.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 56435,
+        "new": false
+      },
+      {
+        "id": "594263345",
+        "name": "第四十七集",
+        "index": 46,
+        "indexStr": "047",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/54/6x6/66x6/666x6/66661100014/594263345_1/594263345.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 50547,
+        "new": false
+      },
+      {
+        "id": "594263346",
+        "name": "第四十八集",
+        "index": 47,
+        "indexStr": "048",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/64/6x6/66x6/666x6/66661100014/594263346_1/594263346.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 48222,
+        "new": false
+      },
+      {
+        "id": "594263347",
+        "name": "第四十九集",
+        "index": 48,
+        "indexStr": "049",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/74/6x6/66x6/666x6/66661100014/594263347_1/594263347.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 55795,
+        "new": false
+      },
+      {
+        "id": "594263348",
+        "name": "第五十集",
+        "index": 49,
+        "indexStr": "050",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/84/6x6/66x6/666x6/66661100014/594263348_1/594263348.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 113545,
+        "new": false
+      },
+      {
+        "id": "594263349",
+        "name": "第五十一集",
+        "index": 50,
+        "indexStr": "051",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/94/6x6/66x6/666x6/66661100014/594263349_1/594263349.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 102899,
+        "new": false
+      },
+      {
+        "id": "594263350",
+        "name": "第五十二集",
+        "index": 51,
+        "indexStr": "052",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/05/6x6/66x6/666x6/66661100014/594263350_1/594263350.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 67955,
+        "new": false
+      },
+      {
+        "id": "594263351",
+        "name": "第五十三集",
+        "index": 52,
+        "indexStr": "053",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/15/6x6/66x6/666x6/66661100014/594263351_1/594263351.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 71219,
+        "new": false
+      },
+      {
+        "id": "594263352",
+        "name": "第五十四集",
+        "index": 53,
+        "indexStr": "054",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/25/6x6/66x6/666x6/66661100014/594263352_1/594263352.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 100275,
+        "new": false
+      },
+      {
+        "id": "594263353",
+        "name": "第五十五集",
+        "index": 54,
+        "indexStr": "055",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/35/6x6/66x6/666x6/66661100014/594263353_1/594263353.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 142558,
+        "new": false
+      },
+      {
+        "id": "594263354",
+        "name": "第五十六集",
+        "index": 55,
+        "indexStr": "056",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/45/6x6/66x6/666x6/66661100014/594263354_1/594263354.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 87390,
+        "new": false
+      },
+      {
+        "id": "594263355",
+        "name": "第五十七集",
+        "index": 56,
+        "indexStr": "057",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/55/6x6/66x6/666x6/66661100014/594263355_1/594263355.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 107849,
+        "new": false
+      },
+      {
+        "id": "594263356",
+        "name": "第五十八集",
+        "index": 57,
+        "indexStr": "058",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/65/6x6/66x6/666x6/66661100014/594263356_1/594263356.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 71369,
+        "new": false
+      },
+      {
+        "id": "594263357",
+        "name": "第五十九集",
+        "index": 58,
+        "indexStr": "059",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/75/6x6/66x6/666x6/66661100014/594263357_1/594263357.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 55070,
+        "new": false
+      },
+      {
+        "id": "594263358",
+        "name": "第六十集",
+        "index": 59,
+        "indexStr": "060",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/85/6x6/66x6/666x6/66661100014/594263358_1/594263358.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 96179,
+        "new": false
+      },
+      {
+        "id": "594263359",
+        "name": "第六十一集",
+        "index": 60,
+        "indexStr": "061",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/95/6x6/66x6/666x6/66661100014/594263359_1/594263359.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 107443,
+        "new": false
+      },
+      {
+        "id": "594263360",
+        "name": "第六十二集",
+        "index": 61,
+        "indexStr": "062",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/06/6x6/66x6/666x6/66661100014/594263360_1/594263360.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 71539,
+        "new": false
+      },
+      {
+        "id": "594263361",
+        "name": "第六十三集",
+        "index": 62,
+        "indexStr": "063",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/16/6x6/66x6/666x6/66661100014/594263361_1/594263361.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 97310,
+        "new": false
+      },
+      {
+        "id": "594263362",
+        "name": "第六十四集",
+        "index": 63,
+        "indexStr": "064",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/26/6x6/66x6/666x6/66661100014/594263362_1/594263362.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 88841,
+        "new": false
+      },
+      {
+        "id": "594263363",
+        "name": "第六十五集",
+        "index": 64,
+        "indexStr": "065",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/36/6x6/66x6/666x6/66661100014/594263363_1/594263363.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 55475,
+        "new": false
+      },
+      {
+        "id": "594263364",
+        "name": "第六十六集",
+        "index": 65,
+        "indexStr": "066",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/46/6x6/66x6/666x6/66661100014/594263364_1/594263364.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 59038,
+        "new": false
+      },
+      {
+        "id": "594263365",
+        "name": "第六十七集",
+        "index": 66,
+        "indexStr": "067",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/56/6x6/66x6/666x6/66661100014/594263365_1/594263365.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 55923,
+        "new": false
+      },
+      {
+        "id": "594263366",
+        "name": "第六十八集",
+        "index": 67,
+        "indexStr": "068",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/66/6x6/66x6/666x6/66661100014/594263366_1/594263366.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 96222,
+        "new": false
+      },
+      {
+        "id": "594263367",
+        "name": "第六十九集",
+        "index": 68,
+        "indexStr": "069",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/76/6x6/66x6/666x6/66661100014/594263367_1/594263367.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 88329,
+        "new": false
+      },
+      {
+        "id": "594263368",
+        "name": "第七十集",
+        "index": 69,
+        "indexStr": "070",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/86/6x6/66x6/666x6/66661100014/594263368_1/594263368.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 101235,
+        "new": false
+      },
+      {
+        "id": "594263369",
+        "name": "第七十一集",
+        "index": 70,
+        "indexStr": "071",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/96/6x6/66x6/666x6/66661100014/594263369_1/594263369.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 72051,
+        "new": false
+      },
+      {
+        "id": "594263370",
+        "name": "第七十二集",
+        "index": 71,
+        "indexStr": "072",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/07/6x6/66x6/666x6/66661100014/594263370_1/594263370.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 59102,
+        "new": false
+      },
+      {
+        "id": "594263371",
+        "name": "第七十三集",
+        "index": 72,
+        "indexStr": "073",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/17/6x6/66x6/666x6/66661100014/594263371_1/594263371.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 59187,
+        "new": false
+      },
+      {
+        "id": "594263372",
+        "name": "第七十四集",
+        "index": 73,
+        "indexStr": "074",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/27/6x6/66x6/666x6/66661100014/594263372_1/594263372.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 87454,
+        "new": false
+      },
+      {
+        "id": "594263373",
+        "name": "第七十五集",
+        "index": 74,
+        "indexStr": "075",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/37/6x6/66x6/666x6/66661100014/594263373_1/594263373.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 76723,
+        "new": false
+      },
+      {
+        "id": "594263374",
+        "name": "第七十六集",
+        "index": 75,
+        "indexStr": "076",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/47/6x6/66x6/666x6/66661100014/594263374_1/594263374.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 95859,
+        "new": false
+      },
+      {
+        "id": "594263375",
+        "name": "第七十七集",
+        "index": 76,
+        "indexStr": "077",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/57/6x6/66x6/666x6/66661100014/594263375_1/594263375.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 101086,
+        "new": false
+      },
+      {
+        "id": "594263376",
+        "name": "第七十八集",
+        "index": 77,
+        "indexStr": "078",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/67/6x6/66x6/666x6/66661100014/594263376_1/594263376.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 81993,
+        "new": false
+      },
+      {
+        "id": "594263377",
+        "name": "第七十九集",
+        "index": 78,
+        "indexStr": "079",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/77/6x6/66x6/666x6/66661100014/594263377_1/594263377.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 68531,
+        "new": false
+      },
+      {
+        "id": "594263378",
+        "name": "第八十集",
+        "index": 79,
+        "indexStr": "080",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/87/6x6/66x6/666x6/66661100014/594263378_1/594263378.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 57097,
+        "new": false
+      },
+      {
+        "id": "594263379",
+        "name": "第八十一集",
+        "index": 80,
+        "indexStr": "081",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/97/6x6/66x6/666x6/66661100014/594263379_1/594263379.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 62942,
+        "new": false
+      },
+      {
+        "id": "594263380",
+        "name": "第八十二集",
+        "index": 81,
+        "indexStr": "082",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/08/6x6/66x6/666x6/66661100014/594263380_1/594263380.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 45427,
+        "new": false
+      },
+      {
+        "id": "594263381",
+        "name": "第八十三集",
+        "index": 82,
+        "indexStr": "083",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/18/6x6/66x6/666x6/66661100014/594263381_1/594263381.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 46857,
+        "new": false
+      },
+      {
+        "id": "594263382",
+        "name": "第八十四集",
+        "index": 83,
+        "indexStr": "084",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/28/6x6/66x6/666x6/66661100014/594263382_1/594263382.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 83209,
+        "new": false
+      },
+      {
+        "id": "594263383",
+        "name": "第八十五集",
+        "index": 84,
+        "indexStr": "085",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/38/6x6/66x6/666x6/66661100014/594263383_1/594263383.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 65054,
+        "new": false
+      },
+      {
+        "id": "594263384",
+        "name": "第八十六集",
+        "index": 85,
+        "indexStr": "086",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/48/6x6/66x6/666x6/66661100014/594263384_1/594263384.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 64905,
+        "new": false
+      },
+      {
+        "id": "594263385",
+        "name": "第八十七集",
+        "index": 86,
+        "indexStr": "087",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/58/6x6/66x6/666x6/66661100014/594263385_1/594263385.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 54451,
+        "new": false
+      },
+      {
+        "id": "594263386",
+        "name": "第八十八集",
+        "index": 87,
+        "indexStr": "088",
+        "unlock": false,
+        "cover": "https://thwztvideo.dramaboxdb.com/68/6x6/66x6/666x6/66661100014/594263386_1/594263386.mp4.jpg@w=100&h=135",
+        "utime": "2025-06-03",
+        "chapterPrice": 0,
+        "duration": 144905,
+        "new": false
+      }
+    ],
+    "languages": [
+      "in"
+    ],
+    "firstLanguage": "in",
+    "articleList": [],
+    "sourceBookId": "41000116666"
+  },
+  "status": 0,
+  "message": "success",
+  "timestamp": 1767417089954,
+  "success": true
+}

@@ -41,18 +41,20 @@
             if (!bookId) return window.location.href = '/';
             try {
                 console.log("Fetching details for:", bookId);
-                const [episodes, trending] = await Promise.all([
+                const [episodes, trending, dramaDetail] = await Promise.all([
                     fetch(`${API_BASE}/allepisode?bookId=${bookId}`).then(r => r.ok ? r.json() : []),
-                    fetch(`${API_BASE}/trending`).then(r => r.ok ? r.json() : [])
+                    fetch(`${API_BASE}/trending`).then(r => r.ok ? r.json() : []),
+                    fetch(`${API_BASE}/detail?bookId=${bookId}`).then(r => r.ok ? r.json() : null)
                 ]);
-                console.log("Details fetched:", { episodes, trending });
+                console.log("Details fetched:", { episodes, trending, dramaDetail });
 
                 if (!Array.isArray(episodes) || episodes.length === 0) {
                     document.getElementById('detail-content').innerHTML = '<div class="text-center py-20">Gagal memuat episode.</div>';
                     return;
                 }
 
-                const drama = trending.find(d => d.bookId === bookId) || episodes[0];
+                // Use the new detail API data if available, fallback to trending or first episode
+                const drama = dramaDetail?.book || trending.find(d => d.bookId === bookId) || episodes[0];
                 const currentEp = episodes[episodeIdx - 1] || episodes[0];
                 
                 // Extract video URL correctly from the new API structure
