@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELFARBOX - Sulih Suara</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #141414;
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .movie-card:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-black/90 px-4 py-3 md:px-8 md:py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4 md:space-x-8">
+            <h1 class="text-white text-2xl md:text-3xl font-bold tracking-tighter cursor-pointer uppercase" onclick="window.location.href='/'"><span class="text-red-600">ELFAR</span><span class="italic">BOX</span></h1>
+            <div class="hidden md:flex space-x-4 text-sm font-light">
+                <a href="/" class="hover:text-gray-300 transition-colors">Beranda</a>
+                <a href="/shorts.html" class="hover:text-gray-300 transition-colors">Shorts</a>
+                <a href="/vip.html" class="hover:text-gray-300 transition-colors">VIP <span class="bg-yellow-500 text-black text-[10px] px-1 rounded-sm font-bold ml-1">NEW</span></a>
+                <a href="/dubbed.html" class="text-white font-bold">Sulih Suara</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-3 md:space-x-4">
+            <div class="w-7 h-7 md:w-8 md:h-8 bg-blue-500 rounded cursor-pointer flex items-center justify-center font-bold text-xs md:text-sm">U</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="px-4 md:px-12 pt-24 relative z-20 space-y-8 pb-24">
+        <section>
+            <h3 class="text-2xl font-bold mb-6">Sulih Suara (Dubbing Indo)</h3>
+            <div id="dubbing-list" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+                <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+                <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Mobile Navigation Bar (Bottom) -->
+    <div class="md:hidden fixed bottom-0 w-full bg-black/20 backdrop-blur-xl border-t border-white/10 z-50 px-6 py-2 pb-4 flex justify-between items-center text-gray-400">
+        <a href="/" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-home text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Beranda</span>
+        </a>
+        <a href="/shorts.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-play-circle text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Shorts</span>
+        </a>
+        <a href="/vip.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-crown text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">VIP</span>
+        </a>
+        <a href="/dubbed.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95 text-white">
+            <i class="fas fa-language text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Sulih</span>
+        </a>
+        <button class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-user text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Profil</span>
+        </button>
+    </div>
+
+    <script>
+        const API_BASE = '/api/proxy/dramabox';
+        async function init() {
+            try {
+                const data = await fetch(`${API_BASE}/dubindo?classify=terbaru&page=1`).then(r => r.ok ? r.json() : []);
+                renderList('dubbing-list', data);
+            } catch (err) {
+                console.error('Failed to load dubbed content:', err);
+            }
+        }
+        function renderList(id, items) {
+            const container = document.getElementById(id);
+            if (!container) return;
+            container.innerHTML = items.map(drama => `
+                <div onclick="window.location.href='/detail.html?id=${drama.bookId}'" class="movie-card transition-all duration-300 cursor-pointer group">
+                    <div class="relative overflow-hidden rounded-sm md:rounded-md bg-gray-800 aspect-[2/3]">
+                        <img src="${drama.coverWap}" alt="${drama.bookName}" class="w-full h-full object-cover">
+                    </div>
+                    <p class="mt-2 text-xs md:text-sm font-medium line-clamp-1">${drama.bookName}</p>
+                </div>
+            `).join('');
+        }
+        init();
+    </script>
+</body>
+</html>

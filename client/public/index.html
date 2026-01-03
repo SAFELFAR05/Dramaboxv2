@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELFARBOX - Drama Streaming [v1.2.1]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #141414;
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .netflix-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0) 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(to top, #141414 0%, rgba(20,20,20,0) 50%, rgba(20,20,20,0.5) 100%);
+        }
+        .movie-card:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 px-4 py-3 md:px-8 md:py-4 flex items-center justify-between netflix-gradient">
+        <div class="flex items-center space-x-4 md:space-x-8">
+            <h1 class="text-white text-2xl md:text-3xl font-bold tracking-tighter cursor-pointer uppercase" onclick="window.location.reload()"><span class="text-red-600">ELFAR</span><span class="italic">BOX</span></h1>
+            <div class="hidden md:flex space-x-4 text-sm font-light">
+                <a href="/" id="nav-beranda" class="hover:text-gray-300 transition-colors">Beranda</a>
+                <a href="/shorts.html" id="nav-shorts" class="hover:text-gray-300 transition-colors">Shorts</a>
+                <a href="/vip.html" id="nav-vip" class="hover:text-gray-300 transition-colors">VIP <span class="bg-yellow-500 text-black text-[10px] px-1 rounded-sm font-bold ml-1">NEW</span></a>
+                <a href="/dubbed.html" id="nav-dubbed" class="hover:text-gray-300 transition-colors">Sulih Suara</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-3 md:space-x-4">
+            <div class="relative group">
+                <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-white transition-colors"></i>
+                <input type="text" id="search-input" placeholder="Cari drama..." 
+                    class="bg-black/50 border border-white/20 rounded-full py-1.5 pl-10 pr-4 text-xs md:text-sm focus:outline-none focus:border-red-600 focus:bg-black/80 transition-all w-32 md:w-64">
+            </div>
+            <i class="fas fa-bell text-sm md:text-lg cursor-pointer hidden sm:block"></i>
+            <div onclick="showProfile()" class="w-7 h-7 md:w-8 md:h-8 bg-blue-500 rounded cursor-pointer flex items-center justify-center font-bold text-xs md:text-sm">U</div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Bar (Bottom) -->
+    <div class="md:hidden fixed bottom-0 w-full bg-black/20 backdrop-blur-xl border-t border-white/10 z-50 px-6 py-2 pb-4 flex justify-between items-center text-gray-400">
+        <a href="/" id="mobile-nav-beranda" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-home text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Beranda</span>
+        </a>
+        <a href="/shorts.html" id="mobile-nav-shorts" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-play-circle text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Shorts</span>
+        </a>
+        <a href="/vip.html" id="mobile-nav-vip" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-crown text-lg text-yellow-500"></i>
+            <span class="text-[9px] font-medium tracking-tight">VIP</span>
+        </a>
+        <a href="/dubbed.html" id="mobile-nav-dubbed" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-language text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Sulih</span>
+        </a>
+        <button onclick="showProfile()" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-user text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Profil</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <div id="hero" class="relative h-[60vh] md:h-[80vh] w-full bg-cover bg-center flex items-end pb-12 md:pb-24 px-4 md:px-12 transition-all duration-1000">
+        <div class="hero-gradient absolute inset-0"></div>
+        <div class="relative z-10 max-w-2xl">
+            <h2 id="hero-title" class="text-3xl md:text-6xl font-bold mb-2 md:mb-4"></h2>
+            <p id="hero-desc" class="text-sm md:text-lg text-gray-200 mb-4 md:mb-6 line-clamp-3"></p>
+            <div class="flex space-x-3 md:space-x-4">
+                <button id="hero-play" class="bg-white text-black px-6 py-2 md:px-8 md:py-2 rounded font-bold flex items-center space-x-2 hover:bg-white/80 transition text-sm md:text-base">
+                    <i class="fas fa-play"></i> <span>Play</span>
+                </button>
+                <button id="hero-info" class="bg-gray-500/50 text-white px-6 py-2 md:px-8 md:py-2 rounded font-bold flex items-center space-x-2 hover:bg-gray-500/30 transition text-sm md:text-base">
+                    <i class="fas fa-info-circle"></i> <span>More Info</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="px-4 md:px-12 -mt-12 relative z-20 space-y-8 pb-12">
+        <section id="trending-section">
+            <h3 class="text-xl font-bold mb-4">Trending Now</h3>
+            <div id="trending-list" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+        </section>
+
+        <section id="foryou-section">
+            <h3 class="text-xl font-bold mb-4">Rekomendasi Untuk Anda</h3>
+            <div id="foryou-list" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+        </section>
+
+        <section id="latest-section">
+            <h3 class="text-xl font-bold mb-4">Terbaru</h3>
+            <div id="latest-list" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+        </section>
+    </div>
+
+    <!-- Profile Sidebar/Modal -->
+    <div id="profile-modal" class="modal items-center justify-center p-4">
+        <div class="bg-white/10 backdrop-blur-xl rounded-2xl max-w-md w-full max-h-[80vh] overflow-y-auto relative border border-white/20 shadow-2xl scrollbar-hide">
+            <button onclick="closeProfile()" class="absolute top-4 right-4 z-50 bg-black/20 hover:bg-black/40 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+                <i class="fas fa-times text-white/70"></i>
+            </button>
+            <div class="p-8">
+                <div class="flex items-center space-x-4 mb-8">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-red-900 rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border border-white/20">U</div>
+                    <div>
+                        <h2 class="text-xl font-bold text-white tracking-tight">Pengguna Setia</h2>
+                        <p class="text-white/50 text-sm">elfarbox@elfar.my.id</p>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <button class="w-full flex items-center justify-between p-3.5 hover:bg-white/10 rounded-xl transition-all text-white/90 group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                                <i class="fas fa-user-circle text-lg text-white/60"></i>
+                            </div>
+                            <span class="font-medium">Akun Saya</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-xs text-white/30 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                    <div class="h-[1px] bg-white/10 my-6"></div>
+                    <button class="w-full flex items-center space-x-4 p-3.5 hover:bg-red-500/10 rounded-xl transition-all text-red-400 group">
+                        <div class="w-10 h-10 rounded-lg bg-red-500/5 flex items-center justify-center group-hover:bg-red-500/10 transition-colors">
+                            <i class="fas fa-sign-out-alt text-lg"></i>
+                        </div>
+                        <span class="font-medium">Keluar</span>
+                    </button>
+                </div>
+                <p class="text-[10px] text-white/30 mt-10 text-center uppercase tracking-[0.2em] font-bold">ELFARBOX v1.2.1</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = '/api/proxy/dramabox';
+
+        async function init() {
+            try {
+                console.log("Fetching data from proxy...");
+                const [trending, foryou, latest] = await Promise.all([
+                    fetch(`${API_BASE}/trending`).then(r => r.ok ? r.json() : []),
+                    fetch(`${API_BASE}/foryou`).then(r => r.ok ? r.json() : []),
+                    fetch(`${API_BASE}/latest`).then(r => r.ok ? r.json() : [])
+                ]);
+
+                console.log("Data fetched:", { trending, foryou, latest });
+
+                if (Array.isArray(trending) && trending.length > 0) {
+                    setupHero(trending[0]);
+                    renderList('trending-list', trending);
+                }
+                if (Array.isArray(foryou)) renderList('foryou-list', foryou);
+                if (Array.isArray(latest)) renderList('latest-list', latest);
+            } catch (err) {
+                console.error('Init failed:', err);
+            }
+        }
+
+        function setupHero(drama) {
+            const hero = document.getElementById('hero');
+            hero.style.backgroundImage = `url(${drama.coverWap})`;
+            document.getElementById('hero-title').innerText = drama.bookName;
+            document.getElementById('hero-desc').innerText = drama.introduction;
+            document.getElementById('hero-play').onclick = () => window.location.href = `/detail.html?id=${drama.bookId}&episode=1`;
+            document.getElementById('hero-info').onclick = () => window.location.href = `/detail.html?id=${drama.bookId}`;
+        }
+
+        function renderList(id, items) {
+            const container = document.getElementById(id);
+            if (!container) return;
+            container.innerHTML = items.map(drama => `
+                <div onclick="window.location.href='/detail.html?id=${drama.bookId}'" class="movie-card transition-all duration-300 cursor-pointer group">
+                    <div class="relative overflow-hidden rounded-sm md:rounded-md bg-gray-800 aspect-[2/3]">
+                        <img src="${drama.coverWap}" alt="${drama.bookName}" class="w-full h-full object-cover">
+                        ${drama.rankVo ? `<span class="absolute bottom-1 right-1 bg-black/60 text-[10px] px-1.5 py-0.5 rounded flex items-center"><i class="fas fa-fire text-red-500 mr-1"></i>${drama.rankVo.hotCode}</span>` : ''}
+                    </div>
+                    <p class="mt-2 text-xs md:text-sm font-medium line-clamp-1">${drama.bookName}</p>
+                </div>
+            `).join('');
+        }
+
+        function showMain() {
+            document.getElementById('main-content').classList.remove('hidden');
+            document.getElementById('hero').classList.remove('hidden');
+            document.getElementById('foryou-section').classList.remove('hidden');
+            document.getElementById('latest-section').classList.remove('hidden');
+            document.getElementById('trending-section').classList.remove('hidden');
+            document.getElementById('trending-section').querySelector('h3').innerText = "Trending Now";
+        }
+
+        function showProfile() {
+            document.getElementById('profile-modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProfile() {
+            document.getElementById('profile-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Search logic
+        let searchTimeout;
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            if (searchTimeout) clearTimeout(searchTimeout);
+            if (!query) return showMain();
+
+            searchTimeout = setTimeout(async () => {
+                const results = await fetch(`${API_BASE}/search?query=${encodeURIComponent(query)}`).then(r => r.json());
+                document.getElementById('trending-section').querySelector('h3').innerText = `Hasil pencarian: "${query}"`;
+                renderList('trending-list', results);
+                document.getElementById('foryou-section').classList.add('hidden');
+                document.getElementById('latest-section').classList.add('hidden');
+            }, 500);
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-black');
+                nav.classList.remove('netflix-gradient');
+            } else {
+                nav.classList.remove('bg-black');
+                nav.classList.add('netflix-gradient');
+            }
+        });
+
+        init();
+    </script>
+</body>
+</html>

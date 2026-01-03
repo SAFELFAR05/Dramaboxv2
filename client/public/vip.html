@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELFARBOX - VIP Content</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #141414;
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .movie-card:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-black/90 px-4 py-3 md:px-8 md:py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4 md:space-x-8">
+            <h1 class="text-white text-2xl md:text-3xl font-bold tracking-tighter cursor-pointer uppercase" onclick="window.location.href='/'"><span class="text-red-600">ELFAR</span><span class="italic">BOX</span></h1>
+            <div class="hidden md:flex space-x-4 text-sm font-light">
+                <a href="/" class="hover:text-gray-300 transition-colors">Beranda</a>
+                <a href="/shorts.html" class="hover:text-gray-300 transition-colors">Shorts</a>
+                <a href="/vip.html" class="text-white font-bold">VIP <span class="bg-yellow-500 text-black text-[10px] px-1 rounded-sm font-bold ml-1">NEW</span></a>
+                <a href="/dubbed.html" class="hover:text-gray-300 transition-colors">Sulih Suara</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-3 md:space-x-4">
+            <div onclick="showProfile()" class="w-7 h-7 md:w-8 md:h-8 bg-blue-500 rounded cursor-pointer flex items-center justify-center font-bold text-xs md:text-sm">U</div>
+        </div>
+    </nav>
+
+    <!-- VIP Content -->
+    <div id="vip-content" class="px-4 md:px-12 pt-24 relative z-20 space-y-12 pb-24">
+        <div class="bg-gradient-to-r from-yellow-600 to-yellow-900 p-8 rounded-xl shadow-2xl mb-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-2 uppercase"><span class="text-red-600">ELFAR</span><span class="text-white italic">BOX</span> <span class="text-yellow-200">VIP</span></h2>
+                <p class="text-yellow-100 opacity-90">Nikmati akses eksklusif ke pilihan mingguan dan konten premium terbaik.</p>
+            </div>
+            <button class="bg-white text-yellow-900 px-8 py-3 rounded-full font-bold hover:scale-105 transition shadow-lg">Buka Akses VIP</button>
+        </div>
+        <div id="vip-list" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <!-- Loading state -->
+            <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+            <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+            <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+            <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+            <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+            <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Bar (Bottom) -->
+    <div class="md:hidden fixed bottom-0 w-full bg-black/20 backdrop-blur-xl border-t border-white/10 z-50 px-6 py-2 pb-4 flex justify-between items-center text-gray-400">
+        <a href="/" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-home text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Beranda</span>
+        </a>
+        <a href="/shorts.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-play-circle text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Shorts</span>
+        </a>
+        <a href="/vip.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95 text-yellow-500">
+            <i class="fas fa-crown text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">VIP</span>
+        </a>
+        <a href="/dubbed.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-language text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Sulih</span>
+        </a>
+        <button onclick="showProfile()" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+            <i class="fas fa-user text-lg"></i>
+            <span class="text-[9px] font-medium tracking-tight">Profil</span>
+        </button>
+    </div>
+
+    <script>
+        const API_BASE = '/api/proxy/dramabox';
+
+        async function init() {
+            try {
+                const data = await fetch(`${API_BASE}/vip`).then(r => r.ok ? r.json() : {});
+                
+                let allDramas = [];
+                if (data.columnVoList && Array.isArray(data.columnVoList)) {
+                    data.columnVoList.forEach(column => {
+                        if (column.bookList && Array.isArray(column.bookList)) {
+                            allDramas = allDramas.concat(column.bookList);
+                        }
+                    });
+                } else if (Array.isArray(data)) {
+                    allDramas = data;
+                }
+
+                // Remove duplicates by bookId
+                const uniqueDramas = Array.from(new Map(allDramas.map(item => [item.bookId, item])).values());
+                
+                renderList('vip-list', uniqueDramas);
+            } catch (err) {
+                console.error('Failed to load VIP content:', err);
+            }
+        }
+
+        function renderList(id, items) {
+            const container = document.getElementById(id);
+            if (!container) return;
+            if (items.length === 0) {
+                container.innerHTML = '<p class="col-span-full text-center text-gray-500 py-12">Tidak ada konten VIP saat ini.</p>';
+                return;
+            }
+            container.innerHTML = items.map(drama => `
+                <div onclick="window.location.href='/detail.html?id=${drama.bookId}'" class="movie-card transition-all duration-300 cursor-pointer group">
+                    <div class="relative overflow-hidden rounded-sm md:rounded-md bg-gray-800 aspect-[2/3]">
+                        <img src="${drama.coverWap}" alt="${drama.bookName}" class="w-full h-full object-cover">
+                        ${drama.rankVo ? `<span class="absolute bottom-1 right-1 bg-black/60 text-[10px] px-1.5 py-0.5 rounded flex items-center"><i class="fas fa-fire text-red-500 mr-1"></i>${drama.rankVo.hotCode}</span>` : ''}
+                    </div>
+                    <p class="mt-2 text-xs md:text-sm font-medium line-clamp-1">${drama.bookName}</p>
+                </div>
+            `).join('');
+        }
+
+        init();
+    </script>
+</body>
+</html>

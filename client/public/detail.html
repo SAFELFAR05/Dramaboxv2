@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELFARBOX - Detail Drama [v1.2.1]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #141414; color: white; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        .video-container { 
+            position: relative; 
+            width: 100%; 
+            background: black;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+    </style>
+</head>
+<body>
+    <nav class="fixed top-0 w-full z-50 p-4 bg-gradient-to-b from-black/80 to-transparent flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2 text-white hover:text-gray-300 transition">
+            <i class="fas fa-arrow-left text-2xl"></i>
+            <span class="text-xl font-bold">Kembali</span>
+        </a>
+        <h1 class="text-white text-xl md:text-2xl font-bold tracking-tighter uppercase cursor-pointer" onclick="window.location.href='/'"><span class="text-red-600">ELFAR</span><span class="italic">BOX</span></h1>
+    </nav>
+
+    <div id="detail-content" class="min-h-screen pt-20 px-4 md:px-12 max-w-6xl mx-auto pb-20">
+        <div class="flex items-center justify-center h-64"><i class="fas fa-spinner fa-spin text-4xl text-red-600"></i></div>
+    </div>
+
+    <script>
+        const API_BASE = '/api/proxy/dramabox';
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookId = urlParams.get('id');
+        const episodeIdx = parseInt(urlParams.get('episode')) || 1;
+
+        async function fetchDetail() {
+            if (!bookId) return window.location.href = '/';
+            try {
+                console.log("Fetching details for:", bookId);
+                const [episodes, trending] = await Promise.all([
+                    fetch(`${API_BASE}/allepisode?bookId=${bookId}`).then(r => r.ok ? r.json() : []),
+                    fetch(`${API_BASE}/trending`).then(r => r.ok ? r.json() : [])
+                ]);
+                console.log("Details fetched:", { episodes, trending });
+
+                if (!Array.isArray(episodes) || episodes.length === 0) {
+                    document.getElementById('detail-content').innerHTML = '<div class="text-center py-20">Gagal memuat episode.</div>';
+                    return;
+                }
+
+                const drama = trending.find(d => d.bookId === bookId) || episodes[0];
+                const currentEp = episodes[episodeIdx - 1] || episodes[0];
+                
+                // Extract video URL correctly from the new API structure
+                let videoUrl = "";
+                if (currentEp.cdnList && currentEp.cdnList.length > 0) {
+                    const cdn = currentEp.cdnList.find(c => c.isDefault === 1) || currentEp.cdnList[0];
+                    if (cdn.videoPathList && cdn.videoPathList.length > 0) {
+                        // Look for a valid video path (preferring 720p but accepting any)
+                        const path = cdn.videoPathList.find(p => p.quality === 720) || cdn.videoPathList[0];
+                        videoUrl = path.videoPath;
+                    }
+                }
+                
+                // Fallback to videoUrl if cdnList extraction failed
+                if (!videoUrl) videoUrl = currentEp.videoUrl;
+
+                // Important: The new API might have &amp; instead of & in URLs from JSON
+                if (videoUrl) {
+                    videoUrl = videoUrl.replace(/&amp;/g, '&');
+                }
+
+                console.log("Playing video:", videoUrl);
+
+                document.getElementById('detail-content').innerHTML = `
+                    <div class="video-container shadow-2xl mb-6">
+                        <video id="player" src="${videoUrl}" controls playsinline class="w-full h-full" poster="${drama.coverWap}"></video>
+                    </div>
+                    
+                    <div class="flex justify-between items-center mb-8">
+                        <h1 class="text-2xl md:text-4xl font-bold">${drama.bookName}</h1>
+                        <div class="flex space-x-2">
+                            ${episodeIdx > 1 ? `<button onclick="window.location.href='?id=${bookId}&episode=${episodeIdx-1}'" class="bg-gray-800 p-2 rounded-full px-4 text-sm">Prev</button>` : ''}
+                            ${episodeIdx < episodes.length ? `<button onclick="window.location.href='?id=${bookId}&episode=${episodeIdx+1}'" class="bg-red-600 p-2 rounded-full px-4 text-sm font-bold">Next</button>` : ''}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                        <div class="lg:col-span-2">
+                            <h3 class="text-xl font-bold mb-4 border-b border-gray-800 pb-2">Sinopsis</h3>
+                            <p class="text-gray-300 mb-8">${drama.introduction || 'Tidak ada deskripsi.'}</p>
+                            
+                            <h3 class="text-xl font-bold mb-4 border-b border-gray-800 pb-2">Pilih Episode</h3>
+                            <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
+                                ${episodes.map((ep, i) => `
+                                    <button onclick="window.location.href='?id=${bookId}&episode=${i+1}'" 
+                                        class="py-2 rounded text-sm transition ${i+1 === episodeIdx ? 'bg-red-600 font-bold' : 'bg-[#2f2f2f] hover:bg-[#3f3f3f]'}">
+                                        ${i+1}
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                if (currentEp.videoUrl) document.getElementById('player').play().catch(() => {});
+            } catch (err) {
+                console.error('Fetch detail failed:', err);
+            }
+        }
+        fetchDetail();
+    </script>
+</body>
+</html>

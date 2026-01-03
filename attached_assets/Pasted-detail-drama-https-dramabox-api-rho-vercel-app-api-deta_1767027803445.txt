@@ -1,0 +1,338 @@
+detail drama https://dramabox-api-rho.vercel.app/api/detail/:bookId/v2
+{
+  "success": true,
+  "data": {
+    "chapters": [
+      {
+        "index": 0,
+        "id": "602078117"
+      },
+      {
+        "index": 1,
+        "id": "602078118"
+      },
+      {
+        "index": 2,
+        "id": "602078119"
+      },
+      {
+        "index": 3,
+        "id": "602078120"
+      },
+      {
+        "index": 4,
+        "id": "602078121"
+      },
+      {
+        "index": 5,
+        "id": "602078122"
+      },
+      {
+        "index": 6,
+        "id": "602078123"
+      },
+      {
+        "index": 7,
+        "id": "602078124"
+      },
+      {
+        "index": 8,
+        "id": "602078125"
+      },
+      {
+        "index": 9,
+        "id": "602078126"
+      },
+      {
+        "index": 10,
+        "id": "602078127"
+      },
+      {
+        "index": 11,
+        "id": "602078128"
+      },
+      {
+        "index": 12,
+        "id": "602078129"
+      },
+      {
+        "index": 13,
+        "id": "602078130"
+      },
+      {
+        "index": 14,
+        "id": "602078131"
+      },
+      {
+        "index": 15,
+        "id": "602078132"
+      },
+      {
+        "index": 16,
+        "id": "602078133"
+      },
+      {
+        "index": 17,
+        "id": "602078134"
+      },
+      {
+        "index": 18,
+        "id": "602078135"
+      },
+      {
+        "index": 19,
+        "id": "602078136"
+      },
+      {
+        "index": 20,
+        "id": "602078137"
+      },
+      {
+        "index": 21,
+        "id": "602078138"
+      },
+      {
+        "index": 22,
+        "id": "602078139"
+      },
+      {
+        "index": 23,
+        "id": "602078140"
+      },
+      {
+        "index": 24,
+        "id": "602078141"
+      },
+      {
+        "index": 25,
+        "id": "602078142"
+      },
+      {
+        "index": 26,
+        "id": "602078143"
+      },
+      {
+        "index": 27,
+        "id": "602078144"
+      },
+      {
+        "index": 28,
+        "id": "602078145"
+      },
+      {
+        "index": 29,
+        "id": "602078146"
+      },
+      {
+        "index": 30,
+        "id": "602078147"
+      },
+      {
+        "index": 31,
+        "id": "602078148"
+      },
+      {
+        "index": 32,
+        "id": "602078149"
+      },
+      {
+        "index": 33,
+        "id": "602078150"
+      },
+      {
+        "index": 34,
+        "id": "602078151"
+      },
+      {
+        "index": 35,
+        "id": "602078152"
+      },
+      {
+        "index": 36,
+        "id": "602078153"
+      },
+      {
+        "index": 37,
+        "id": "602078154"
+      },
+      {
+        "index": 38,
+        "id": "602078155"
+      },
+      {
+        "index": 39,
+        "id": "602078156"
+      },
+      {
+        "index": 40,
+        "id": "602078157"
+      },
+      {
+        "index": 41,
+        "id": "602078158"
+      },
+      {
+        "index": 42,
+        "id": "602078159"
+      },
+      {
+        "index": 43,
+        "id": "602078160"
+      },
+      {
+        "index": 44,
+        "id": "602078161"
+      },
+      {
+        "index": 45,
+        "id": "602078162"
+      },
+      {
+        "index": 46,
+        "id": "602078163"
+      },
+      {
+        "index": 47,
+        "id": "602078164"
+      },
+      {
+        "index": 48,
+        "id": "602078165"
+      },
+      {
+        "index": 49,
+        "id": "602078166"
+      },
+      {
+        "index": 50,
+        "id": "602078167"
+      },
+      {
+        "index": 51,
+        "id": "602078168"
+      },
+      {
+        "index": 52,
+        "id": "602078169"
+      },
+      {
+        "index": 53,
+        "id": "602078170"
+      },
+      {
+        "index": 54,
+        "id": "602078171"
+      },
+      {
+        "index": 55,
+        "id": "602078172"
+      },
+      {
+        "index": 56,
+        "id": "602078173"
+      },
+      {
+        "index": 57,
+        "id": "602078174"
+      },
+      {
+        "index": 58,
+        "id": "602078175"
+      },
+      {
+        "index": 59,
+        "id": "602078176"
+      },
+      {
+        "index": 60,
+        "id": "602078177"
+      },
+      {
+        "index": 61,
+        "id": "602078178"
+      },
+      {
+        "index": 62,
+        "id": "602078179"
+      },
+      {
+        "index": 63,
+        "id": "602078180"
+      }
+    ],
+    "drama": {
+      "bookId": "41000122558",
+      "bookName": "Kau Bukan Siapa-siapa Bagiku",
+      "cover": "https://thwztchapter.dramaboxdb.com/data/cppartner/4x1/41x0/410x0/41000122558/41000122558.jpg@w=240&h=400",
+      "viewCount": 8541715,
+      "followCount": 306734,
+      "introduction": " Sebastian, seorang CEO miliarder, mengajak Eleanor untuk menikah demi menghindari pernikahan paksa keluarganya. Walau awalnya menolak, Eleanor akhirnya setuju menikah dengan Sebastian setelah menolongnya saat Eleanor dicampakkan dan dihina tunangan yang sudah dibiayainya. Yang tidak diketahui Sebastian, Eleanor adalah seorang CEO miliarder rahasia yang lebih berpengaruh. Setelah rahasia terungkap, akankah cinta mereka bertahan?",
+      "chapterCount": 64,
+      "labels": [
+        "Strong Female Lead",
+        "Billionaire"
+      ],
+      "tags": [
+        "Strong Female Lead",
+        "Billionaire"
+      ],
+      "typeTwoIds": [
+        447
+      ],
+      "typeTwoNames": [
+        "Romansa"
+      ],
+      "typeTwoList": [
+        {
+          "id": 447,
+          "name": "Romansa",
+          "replaceName": "romansa"
+        }
+      ],
+      "language": "BAHASA_INDONESIA",
+      "typeTwoName": "Romansa",
+      "simpleLanguage": "in",
+      "bookNameEn": "Kau-Bukan-Siapa-siapa-Bagiku",
+      "bookNameLower": "kau-bukan-siapa-siapa-bagiku",
+      "shelfTime": "2025-10-14 11:01:47",
+      "firstShelfTime": "2025-10-14 11:01:47",
+      "performerList": [
+        {
+          "performerId": "12299",
+          "performerName": "Brando White",
+          "performerFormatName": "Brando-White",
+          "performerAvatar": "https://hwztchapter.dramaboxdb.com/data/cppartner/9x9/12299/12299.jpg?time=1766028762184",
+          "videoCount": 2
+        },
+        {
+          "performerId": "12034",
+          "performerName": "Candace Mizga",
+          "performerFormatName": "Candace-Mizga",
+          "performerAvatar": "https://hwztchapter.dramaboxdb.com/data/cppartner/4x3/12034/12034.jpg?time=1766473717500",
+          "videoCount": 6
+        },
+        {
+          "performerId": "12153",
+          "performerName": "Chanda Davetas",
+          "performerFormatName": "Chanda-Davetas",
+          "performerAvatar": "https://hwztchapter.dramaboxdb.com/data/cppartner/3x5/12153/12153.jpg?time=1766028762391",
+          "videoCount": 2
+        },
+        {
+          "performerId": "12304",
+          "performerName": "Keegan Hughes",
+          "performerFormatName": "Keegan-Hughes",
+          "performerAvatar": "https://hwztchapter.dramaboxdb.com/data/cppartner/4x0/12304/12304.jpg?time=1766028762279",
+          "videoCount": 2
+        }
+      ],
+      "performerIdList": [
+        12034,
+        12153,
+        12299,
+        12304
+      ]
+    }
+  }
+}
+
