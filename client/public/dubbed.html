@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="flex items-center space-x-3 md:space-x-4">
-            <div onclick="window.location.href='/profile.html'" class="w-7 h-7 md:w-8 md:h-8 bg-blue-500 rounded cursor-pointer flex items-center justify-center font-bold text-xs md:text-sm">U</div>
+            <div onclick="window.location.href='/profile.html'" class="w-7 h-7 md:w-8 md:h-8 bg-blue-500 rounded cursor-pointer flex items-center justify-center font-bold text-xs md:text-sm" id="user-initial">U</div>
         </div>
     </nav>
 
@@ -57,7 +57,7 @@
             <span class="text-[9px] font-medium tracking-tight">Shorts</span>
         </a>
         <a href="/vip.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
-            <i class="fas fa-crown text-lg text-yellow-500"></i>
+            <i class="fas fa-crown text-lg"></i>
             <span class="text-[9px] font-medium tracking-tight">VIP</span>
         </a>
         <a href="/dubbed.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95 text-white">
@@ -73,7 +73,7 @@
     <script>
         const API_BASE = 'https://dramaboxv2.elfar.my.id';
         const CACHE_KEY = 'elfarbox_dubbed_cache';
-        const CACHE_TIME = 15 * 60 * 1000;
+        const CACHE_TIME = 30 * 60 * 1000; // Updated to 30 minutes cache
 
         function getCache() {
             const cached = localStorage.getItem(CACHE_KEY);
@@ -91,6 +91,12 @@
         }
 
         async function init() {
+            // Update user initial
+            const user = JSON.parse(localStorage.getItem('elfarbox_user') || 'null');
+            if (user && user.name) {
+                document.getElementById('user-initial').innerText = user.name.charAt(0).toUpperCase();
+            }
+
             try {
                 const cached = getCache();
                 if (cached) {
