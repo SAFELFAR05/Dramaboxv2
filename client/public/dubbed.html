@@ -27,7 +27,7 @@
                 <a href="/" class="hover:text-gray-300 transition-colors">Beranda</a>
                 <a href="/shorts.html" class="hover:text-gray-300 transition-colors">Shorts</a>
                 <a href="/vip.html" class="hover:text-gray-300 transition-colors">VIP <span class="bg-yellow-500 text-black text-[10px] px-1 rounded-sm font-bold ml-1">NEW</span></a>
-                <a href="/dubbed.html" class="text-white font-bold">Sulih Suara</a>
+                <a href="/dubbed.html" class="text-white font-bold underline decoration-red-600 decoration-2 underline-offset-8">Sulih Suara</a>
             </div>
         </div>
         <div class="flex items-center space-x-3 md:space-x-4">
@@ -40,7 +40,6 @@
         <section>
             <h3 class="text-2xl font-bold mb-6">Sulih Suara (Dubbing Indo)</h3>
             <div id="dubbing-list" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
                 <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
                 <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
             </div>
@@ -58,7 +57,7 @@
             <span class="text-[9px] font-medium tracking-tight">Shorts</span>
         </a>
         <a href="/vip.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
-            <i class="fas fa-crown text-lg"></i>
+            <i class="fas fa-crown text-lg text-yellow-500"></i>
             <span class="text-[9px] font-medium tracking-tight">VIP</span>
         </a>
         <a href="/dubbed.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95 text-white">
@@ -73,14 +72,45 @@
 
     <script>
         const API_BASE = 'https://dramaboxv2.elfar.my.id';
+        const CACHE_KEY = 'elfarbox_dubbed_cache';
+        const CACHE_TIME = 15 * 60 * 1000;
+
+        function getCache() {
+            const cached = localStorage.getItem(CACHE_KEY);
+            if (!cached) return null;
+            const { data, timestamp } = JSON.parse(cached);
+            if (Date.now() - timestamp > CACHE_TIME) {
+                localStorage.removeItem(CACHE_KEY);
+                return null;
+            }
+            return data;
+        }
+
+        function setCache(data) {
+            localStorage.setItem(CACHE_KEY, JSON.stringify({ data, timestamp: Date.now() }));
+        }
+
         async function init() {
             try {
-                const data = await fetch(`${API_BASE}/dubindo?classify=terbaru&page=1`).then(r => r.ok ? r.json() : []);
+                const cached = getCache();
+                if (cached) {
+                    renderList('dubbing-list', cached);
+                    return;
+                }
+
+                const data = await fetch(`${API_BASE}/dubindo?classify=terbaru&page=1`).then(r => r.ok ? r.json() : { error: true });
+                if (data.error) throw new Error(data.message || 'API limit reached');
+                
+                setCache(data);
                 renderList('dubbing-list', data);
             } catch (err) {
                 console.error('Failed to load dubbed content:', err);
+                const cached = getCache();
+                if (cached) renderList('dubbing-list', cached);
+                else document.getElementById('dubbing-list').innerHTML = `<p class="col-span-full text-center text-gray-500 py-12">${err.message || 'Gagal memuat konten.'}</p>`;
             }
         }
+
         function renderList(id, items) {
             const container = document.getElementById(id);
             if (!container) return;
@@ -92,16 +122,6 @@
                     <p class="mt-2 text-xs md:text-sm font-medium line-clamp-1">${drama.bookName}</p>
                 </div>
             `).join('');
-        }
-
-        function showProfile() {
-            document.getElementById('profile-modal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeProfile() {
-            document.getElementById('profile-modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
         }
 
         init();

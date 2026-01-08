@@ -16,16 +16,6 @@
             transform: scale(1.05);
             z-index: 10;
         }
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 100;
-        }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -36,7 +26,7 @@
             <div class="hidden md:flex space-x-4 text-sm font-light">
                 <a href="/" class="hover:text-gray-300 transition-colors">Beranda</a>
                 <a href="/shorts.html" class="hover:text-gray-300 transition-colors">Shorts</a>
-                <a href="/vip.html" class="text-white font-bold">VIP <span class="bg-yellow-500 text-black text-[10px] px-1 rounded-sm font-bold ml-1">NEW</span></a>
+                <a href="/vip.html" class="text-white font-bold underline decoration-red-600 decoration-2 underline-offset-8">VIP <span class="bg-yellow-500 text-black text-[10px] px-1 rounded-sm font-bold ml-1">NEW</span></a>
                 <a href="/dubbed.html" class="hover:text-gray-300 transition-colors">Sulih Suara</a>
             </div>
         </div>
@@ -55,10 +45,7 @@
             <button class="bg-white text-yellow-900 px-8 py-3 rounded-full font-bold hover:scale-105 transition shadow-lg">Buka Akses VIP</button>
         </div>
         <div id="vip-list" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <!-- Loading state -->
-            <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
-            <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
-            <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
+            <!-- Initial skeletons -->
             <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
             <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
             <div class="animate-pulse bg-gray-800 rounded aspect-[2/3]"></div>
@@ -83,7 +70,7 @@
             <i class="fas fa-language text-lg"></i>
             <span class="text-[9px] font-medium tracking-tight">Sulih</span>
         </a>
-        <a href="/profile.html" onclick="showProfile()" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
+        <a href="/profile.html" class="flex flex-col items-center space-y-0.5 transition-all active:scale-95">
             <i class="fas fa-user text-lg"></i>
             <span class="text-[9px] font-medium tracking-tight">Profil</span>
         </a>
@@ -91,29 +78,58 @@
 
     <script>
         const API_BASE = 'https://dramaboxv2.elfar.my.id';
+        const CACHE_KEY = 'elfarbox_vip_cache';
+        const CACHE_TIME = 15 * 60 * 1000;
+
+        function getCache() {
+            const cached = localStorage.getItem(CACHE_KEY);
+            if (!cached) return null;
+            const { data, timestamp } = JSON.parse(cached);
+            if (Date.now() - timestamp > CACHE_TIME) {
+                localStorage.removeItem(CACHE_KEY);
+                return null;
+            }
+            return data;
+        }
+
+        function setCache(data) {
+            localStorage.setItem(CACHE_KEY, JSON.stringify({ data, timestamp: Date.now() }));
+        }
 
         async function init() {
             try {
-                const data = await fetch(`${API_BASE}/vip`).then(r => r.ok ? r.json() : {});
-                
-                let allDramas = [];
-                if (data.columnVoList && Array.isArray(data.columnVoList)) {
-                    data.columnVoList.forEach(column => {
-                        if (column.bookList && Array.isArray(column.bookList)) {
-                            allDramas = allDramas.concat(column.bookList);
-                        }
-                    });
-                } else if (Array.isArray(data)) {
-                    allDramas = data;
+                const cached = getCache();
+                if (cached) {
+                    renderVIP(cached);
+                    return;
                 }
 
-                // Remove duplicates by bookId
-                const uniqueDramas = Array.from(new Map(allDramas.map(item => [item.bookId, item])).values());
+                const data = await fetch(`${API_BASE}/vip`).then(r => r.ok ? r.json() : { error: true });
+                if (data.error) throw new Error(data.message || 'API limit reached');
                 
-                renderList('vip-list', uniqueDramas);
+                setCache(data);
+                renderVIP(data);
             } catch (err) {
                 console.error('Failed to load VIP content:', err);
+                const cached = getCache();
+                if (cached) renderVIP(cached);
+                else document.getElementById('vip-list').innerHTML = `<p class="col-span-full text-center text-gray-500 py-12">${err.message || 'Gagal memuat konten.'}</p>`;
             }
+        }
+
+        function renderVIP(data) {
+            let allDramas = [];
+            if (data.columnVoList && Array.isArray(data.columnVoList)) {
+                data.columnVoList.forEach(column => {
+                    if (column.bookList && Array.isArray(column.bookList)) {
+                        allDramas = allDramas.concat(column.bookList);
+                    }
+                });
+            } else if (Array.isArray(data)) {
+                allDramas = data;
+            }
+            const uniqueDramas = Array.from(new Map(allDramas.map(item => [item.bookId, item])).values());
+            renderList('vip-list', uniqueDramas);
         }
 
         function renderList(id, items) {
@@ -132,16 +148,6 @@
                     <p class="mt-2 text-xs md:text-sm font-medium line-clamp-1">${drama.bookName}</p>
                 </div>
             `).join('');
-        }
-
-        function showProfile() {
-            document.getElementById('profile-modal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeProfile() {
-            document.getElementById('profile-modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
         }
 
         init();

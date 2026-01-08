@@ -42,7 +42,7 @@
             <i class="fas fa-play-circle text-base"></i>
             <span class="text-[9px] mt-0.5">Shorts</span>
         </a>
-        <a href="/?tab=vip" class="flex flex-col items-center text-gray-400">
+        <a href="/vip.html" class="flex flex-col items-center text-gray-400">
             <i class="fas fa-crown text-base text-yellow-500"></i>
             <span class="text-[9px] mt-0.5">VIP</span>
         </a>
@@ -54,22 +54,48 @@
 
     <script>
         const API_BASE = 'https://dramaboxv2.elfar.my.id';
+        const CACHE_KEY = 'elfarbox_shorts_cache';
+        const CACHE_TIME = 15 * 60 * 1000;
         const container = document.getElementById('short-container');
         let isLoading = false;
+
+        function getCache() {
+            const cached = localStorage.getItem(CACHE_KEY);
+            if (!cached) return null;
+            const { data, timestamp } = JSON.parse(cached);
+            if (Date.now() - timestamp > CACHE_TIME) {
+                localStorage.removeItem(CACHE_KEY);
+                return null;
+            }
+            return data;
+        }
+
+        function setCache(data) {
+            localStorage.setItem(CACHE_KEY, JSON.stringify({ data, timestamp: Date.now() }));
+        }
 
         async function loadShorts() {
             if (isLoading) return;
             isLoading = true;
             try {
-                console.log("Loading shorts...");
-                const dramas = await fetch(`${API_BASE}/randomdrama`).then(r => r.ok ? r.json() : []);
-                console.log("Shorts fetched:", dramas);
+                const cached = getCache();
+                let dramas = [];
                 
-                if (!Array.isArray(dramas)) return;
+                if (cached && container.querySelector('.fa-spinner')) {
+                    dramas = cached;
+                    console.log("Using cached shorts");
+                } else {
+                    console.log("Loading fresh shorts...");
+                    dramas = await fetch(`${API_BASE}/randomdrama`).then(r => r.ok ? r.json() : []);
+                    if (Array.isArray(dramas) && dramas.length > 0) {
+                        setCache(dramas);
+                    }
+                }
+                
+                if (!Array.isArray(dramas) || dramas.length === 0) return;
                 if (container.querySelector('.fa-spinner')) container.innerHTML = '';
                 
                 for (const drama of dramas) {
-                    // Extract video URL correctly from the new API structure for shorts
                     let videoUrl = "";
                     if (drama.cdnList && drama.cdnList.length > 0) {
                         const cdn = drama.cdnList.find(c => c.isDefault === 1) || drama.cdnList[0];
@@ -103,7 +129,6 @@
                     `;
                     container.appendChild(item);
                     
-                    // Only fetch stream if videoUrl is still empty
                     if (!videoUrl) {
                         fetchStream(item, drama.bookId);
                     } else {
@@ -162,21 +187,6 @@
             }, { threshold: 0.7 });
 
             container.querySelectorAll('.short-item').forEach(item => observer.observe(item));
-        }
-
-        function showProfile() {
-            document.getElementById('profile-modal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeProfile() {
-            document.getElementById('profile-modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Handle profile from URL
-        if (window.location.search.includes('showProfile=true')) {
-            showProfile();
         }
 
         loadShorts();
