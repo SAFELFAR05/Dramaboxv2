@@ -121,38 +121,76 @@
 
     <script>
         const API_BASE = 'https://dramaboxv2.elfar.my.id';
+        const CACHE_KEY = 'elfarbox_home_cache';
+        const CACHE_TIME = 15 * 60 * 1000; // 15 minutes cache
+
+        function getCache() {
+            const cached = localStorage.getItem(CACHE_KEY);
+            if (!cached) return null;
+            const { data, timestamp } = JSON.parse(cached);
+            if (Date.now() - timestamp > CACHE_TIME) {
+                localStorage.removeItem(CACHE_KEY);
+                return null;
+            }
+            return data;
+        }
+
+        function setCache(data) {
+            localStorage.setItem(CACHE_KEY, JSON.stringify({
+                data,
+                timestamp: Date.now()
+            }));
+        }
 
         async function init() {
             try {
-                console.log("Fetching data from proxy...");
+                const cachedData = getCache();
+                if (cachedData) {
+                    console.log("Using cached data");
+                    applyData(cachedData);
+                    return;
+                }
+
+                console.log("Fetching fresh data...");
                 const [trending, foryou, latest] = await Promise.all([
-                    fetch(`${API_BASE}/trending`).then(r => r.ok ? r.json() : []),
-                    fetch(`${API_BASE}/foryou`).then(r => r.ok ? r.json() : []),
-                    fetch(`${API_BASE}/latest`).then(r => r.ok ? r.json() : [])
+                    fetch(`${API_BASE}/trending`).then(r => r.ok ? r.json() : { error: true }),
+                    fetch(`${API_BASE}/foryou`).then(r => r.ok ? r.json() : { error: true }),
+                    fetch(`${API_BASE}/latest`).then(r => r.ok ? r.json() : { error: true })
                 ]);
 
-                console.log("Data fetched:", { trending, foryou, latest });
-
-                if (Array.isArray(trending) && trending.length > 0) {
-                    setupHero(trending[0]);
-                    renderList('trending-list', trending);
-                } else if (trending.error) {
-                    document.getElementById('trending-list').innerHTML = `<div class="col-span-full py-10 text-center text-gray-500">${trending.message || 'Gagal memuat data.'}</div>`;
+                const data = { trending, foryou, latest };
+                
+                // Only cache if we got at least some real data
+                if (!trending.error || !foryou.error || !latest.error) {
+                    setCache(data);
                 }
-
-                if (Array.isArray(foryou)) {
-                    renderList('foryou-list', foryou);
-                } else if (foryou.error) {
-                    document.getElementById('foryou-list').innerHTML = `<div class="col-span-full py-10 text-center text-gray-500">${foryou.message || 'Gagal memuat data.'}</div>`;
-                }
-
-                if (Array.isArray(latest)) {
-                    renderList('latest-list', latest);
-                } else if (latest.error) {
-                    document.getElementById('latest-list').innerHTML = `<div class="col-span-full py-10 text-center text-gray-500">${latest.message || 'Gagal memuat data.'}</div>`;
-                }
+                
+                applyData(data);
             } catch (err) {
                 console.error('Init failed:', err);
+                const cachedData = getCache();
+                if (cachedData) applyData(cachedData);
+            }
+        }
+
+        function applyData({ trending, foryou, latest }) {
+            if (Array.isArray(trending) && trending.length > 0) {
+                setupHero(trending[0]);
+                renderList('trending-list', trending);
+            } else if (trending && trending.error) {
+                document.getElementById('trending-list').innerHTML = `<div class="col-span-full py-10 text-center text-gray-500">${trending.message || 'Gagal memuat data.'}</div>`;
+            }
+
+            if (Array.isArray(foryou)) {
+                renderList('foryou-list', foryou);
+            } else if (foryou && foryou.error) {
+                document.getElementById('foryou-list').innerHTML = `<div class="col-span-full py-10 text-center text-gray-500">${foryou.message || 'Gagal memuat data.'}</div>`;
+            }
+
+            if (Array.isArray(latest)) {
+                renderList('latest-list', latest);
+            } else if (latest && latest.error) {
+                document.getElementById('latest-list').innerHTML = `<div class="col-span-full py-10 text-center text-gray-500">${latest.message || 'Gagal memuat data.'}</div>`;
             }
         }
 
