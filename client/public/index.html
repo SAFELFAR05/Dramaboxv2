@@ -103,14 +103,6 @@
 
     <!-- Main Content -->
     <div id="main-content" class="px-4 md:px-12 -mt-12 relative z-20 space-y-8 pb-12">
-        <section id="history-section" class="hidden">
-            <div class="flex items-center justify-between mb-4">
-                <h3 class="text-xl font-bold">Riwayat Tontonan</h3>
-                <button onclick="clearHistory()" class="text-xs text-gray-400 hover:text-white transition-colors">Hapus Semua</button>
-            </div>
-            <div id="history-list" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
-        </section>
-
         <section id="trending-section">
             <h3 class="text-xl font-bold mb-4">Trending Now</h3>
             <div id="trending-list" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
@@ -166,7 +158,6 @@
 
     <script>
         const API_BASE = 'https://dramaboxv2.elfar.my.id';
-        const HISTORY_KEY = 'watch_history';
 
         async function init() {
             try {
@@ -185,43 +176,9 @@
                 }
                 if (Array.isArray(foryou)) renderList('foryou-list', foryou);
                 if (Array.isArray(latest)) renderList('latest-list', latest);
-                
-                loadHistory();
             } catch (err) {
                 console.error('Init failed:', err);
             }
-        }
-
-        function saveToHistory(drama) {
-            let history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
-            // Remove if already exists to move to top
-            history = history.filter(item => item.bookId !== drama.bookId);
-            history.unshift(drama);
-            // Limit to 20 items
-            if (history.length > 20) history.pop();
-            localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
-            loadHistory();
-        }
-
-        function loadHistory() {
-            const history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
-            const section = document.getElementById('history-section');
-            if (history.length > 0) {
-                section.classList.remove('hidden');
-                renderList('history-list', history);
-            } else {
-                section.classList.add('hidden');
-            }
-        }
-
-        function clearHistory() {
-            localStorage.removeItem(HISTORY_KEY);
-            loadHistory();
-        }
-
-        function navigateToDetail(drama) {
-            saveToHistory(drama);
-            window.location.href = `/detail.html?id=${drama.bookId}`;
         }
 
         function setupHero(drama) {
@@ -229,14 +186,8 @@
             hero.style.backgroundImage = `url(${drama.coverWap})`;
             document.getElementById('hero-title').innerText = drama.bookName;
             document.getElementById('hero-desc').innerText = drama.introduction;
-            document.getElementById('hero-play').onclick = () => {
-                saveToHistory(drama);
-                window.location.href = `/detail.html?id=${drama.bookId}&episode=1`;
-            };
-            document.getElementById('hero-info').onclick = () => {
-                saveToHistory(drama);
-                window.location.href = `/detail.html?id=${drama.bookId}`;
-            };
+            document.getElementById('hero-play').onclick = () => window.location.href = `/detail.html?id=${drama.bookId}&episode=1`;
+            document.getElementById('hero-info').onclick = () => window.location.href = `/detail.html?id=${drama.bookId}`;
         }
 
         function renderList(id, items) {
@@ -244,9 +195,8 @@
             if (!container) return;
             container.innerHTML = items.map(drama => {
                 const cover = drama.coverWap || drama.cover || '';
-                const dramaData = JSON.stringify(drama).replace(/"/g, '&quot;');
                 return `
-                <div onclick='navigateToDetail(${dramaData})' class="movie-card transition-all duration-300 cursor-pointer group">
+                <div onclick="window.location.href='/detail.html?id=${drama.bookId}'" class="movie-card transition-all duration-300 cursor-pointer group">
                     <div class="relative overflow-hidden rounded-sm md:rounded-md bg-gray-800 aspect-[2/3]">
                         <img src="${cover}" alt="${drama.bookName}" class="w-full h-full object-cover">
                         ${drama.rankVo ? `<span class="absolute bottom-1 right-1 bg-black/60 text-[10px] px-1.5 py-0.5 rounded flex items-center"><i class="fas fa-fire text-red-500 mr-1"></i>${drama.rankVo.hotCode}</span>` : ''}
@@ -263,7 +213,6 @@
             document.getElementById('latest-section').classList.remove('hidden');
             document.getElementById('trending-section').classList.remove('hidden');
             document.getElementById('trending-section').querySelector('h3').innerText = "Trending Now";
-            loadHistory();
         }
 
         function showProfile() {
@@ -289,7 +238,6 @@
                 renderList('trending-list', results);
                 document.getElementById('foryou-section').classList.add('hidden');
                 document.getElementById('latest-section').classList.add('hidden');
-                document.getElementById('history-section').classList.add('hidden');
             }, 500);
         });
 

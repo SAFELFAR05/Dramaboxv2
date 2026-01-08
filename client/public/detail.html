@@ -36,6 +36,7 @@
 
     <script>
         const API_BASE = 'https://dramaboxv2.elfar.my.id';
+        const HISTORY_KEY = 'watch_history';
         const urlParams = new URLSearchParams(window.location.search);
         const bookId = urlParams.get('id');
         const episodeIdx = parseInt(urlParams.get('episode')) || 1;
@@ -56,25 +57,27 @@
                     return;
                 }
 
-                // Use the new detail API data if available, fallback to trending or first episode
                 const drama = dramaDetail?.book || trending.find(d => d.bookId === bookId) || episodes[0];
                 const currentEp = episodes[episodeIdx - 1] || episodes[0];
 
-                // Extract video URL correctly from the new API structure
+                // Save to history
+                saveToHistory({
+                    bookId: bookId,
+                    bookName: drama.bookName,
+                    coverWap: drama.coverWap || drama.cover,
+                    lastEpisode: episodeIdx,
+                    timestamp: Date.now()
+                });
+
                 let videoUrl = "";
                 if (currentEp.cdnList && currentEp.cdnList.length > 0) {
                     const cdn = currentEp.cdnList.find(c => c.isDefault === 1) || currentEp.cdnList[0];
                     if (cdn.videoPathList && cdn.videoPathList.length > 0) {
-                        // Look for a valid video path (preferring 720p but accepting any)
                         const path = cdn.videoPathList.find(p => p.quality === 720) || cdn.videoPathList[0];
                         videoUrl = path.videoPath;
                     }
                 }
-                
-                // Fallback to videoUrl if cdnList extraction failed
                 if (!videoUrl) videoUrl = currentEp.videoUrl;
-
-                // Important: The new API might have &amp; instead of & in URLs from JSON
                 if (videoUrl) {
                     videoUrl = videoUrl.replace(/&amp;/g, '&');
                 }
@@ -115,6 +118,14 @@
             } catch (err) {
                 console.error('Fetch detail failed:', err);
             }
+        }
+
+        function saveToHistory(item) {
+            let history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+            history = history.filter(h => h.bookId !== item.bookId);
+            history.unshift(item);
+            if (history.length > 30) history.pop();
+            localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
         }
         
         function showProfile() {
